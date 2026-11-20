@@ -18,9 +18,11 @@ import { restaurant as r, hoursLabel } from '../data/restaurant';
 // así los dos transforms no se pisan.
 ---
 <section id="inicio" class="hero relative" aria-labelledby="hero-title" data-parallax-section="hero" data-mouse-parallax>
+  <!-- Amanecer (motion.ts → heroSunrise): el cielo pasa de noche a aurora con el scroll -->
+  <div class="hero-sky" aria-hidden="true" data-sky></div>
   <div class="wrap hero-grid">
     <div class="hero-copy" data-hero-copy>
-      <div class="hero-moon" data-speed="-0.06" aria-hidden="true">
+      <div class="hero-moon" data-speed="-0.06" data-night aria-hidden="true">
         <div data-mouse-depth="0.02"><Moon class="w-full text-oro" data-enter="draw" /></div>
       </div>
       <div data-enter="fade">
@@ -50,8 +52,9 @@ import { restaurant as r, hoursLabel } from '../data/restaurant';
     </div>
 
     <div class="hero-visual">
-      <div class="hv hv-sun" data-speed="-0.14" aria-hidden="true">
-        <div data-mouse-depth="0.018"><Sun class="w-full text-tiza" data-enter="sun" /></div>
+      <div class="hv hv-sun" aria-hidden="true" data-sun-wrap>
+        <div class="dawn-glow" data-dawn-glow></div>
+        <div data-mouse-depth="0.018"><Sun class="w-full text-tiza" data-enter="sun" data-sun /></div>
       </div>
       <div class="hv-photo" data-speed="0.04">
         <figure class="ph hero-photo" style="--pos: 64% 50%" data-enter="photo">
@@ -70,10 +73,10 @@ import { restaurant as r, hoursLabel } from '../data/restaurant';
       <div class="hv hv-nopal" data-speed="0.3" aria-hidden="true">
         <div data-mouse-depth="0.055"><Nopal class="w-full text-tiza" data-enter="grow" /></div>
       </div>
-      <div class="hv hv-star-a" data-speed="0.42" aria-hidden="true">
+      <div class="hv hv-star-a" data-speed="0.42" data-night aria-hidden="true">
         <div data-mouse-depth="0.07"><Star class="w-full text-oro" data-enter="pop" /></div>
       </div>
-      <div class="hv hv-star-b" data-speed="0.32" aria-hidden="true">
+      <div class="hv hv-star-b" data-speed="0.32" data-night aria-hidden="true">
         <div data-mouse-depth="0.06"><Star class="w-full text-oro" data-enter="pop" /></div>
       </div>
     </div>
@@ -87,6 +90,22 @@ import { restaurant as r, hoursLabel } from '../data/restaurant';
     padding-bottom: clamp(32px, 5vh, 64px);
     display: flex;
     align-items: center;
+    isolation: isolate;
+    overflow: clip;
+  }
+  /* Cielo de aurora: índigo arriba (como la pared celeste del local), terracota oscuro abajo.
+     Arranca invisible (noche = pizarra) y solo se anima su opacidad. */
+  .hero-sky {
+    position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0;
+    background: linear-gradient(180deg, #16163a 0%, #2a1a30 38%, #4a2116 72%, #5c2614 100%);
+  }
+  /* Halo del sol: 3 veces el ancho del sol, centrado en él. Se anima con scale + opacity. */
+  .dawn-glow {
+    position: absolute; left: -100%; top: -100%; width: 300%; height: 300%; z-index: -1;
+    pointer-events: none; opacity: 0; transform: scale(0.3);
+    background: radial-gradient(closest-side,
+      rgb(255 222 150 / 0.95) 0%, rgb(222 126 42 / 0.85) 24%, rgb(181 66 12 / 0.5) 46%,
+      rgb(22 22 58 / 0.18) 72%, transparent 100%);
   }
   .hero-grid {
     display: grid;
@@ -105,7 +124,8 @@ import { restaurant as r, hoursLabel } from '../data/restaurant';
   .hv { position: absolute; z-index: 2; }
   .hv-sun { z-index: 0; left: 13%; top: 0; width: 74%; }
   .hv-photo { position: relative; z-index: 1; }
-  .hero-photo { aspect-ratio: 1; }
+  /* Marco fino para que la foto oscura se despegue del fondo */
+  .hero-photo { aspect-ratio: 1; box-shadow: 0 0 0 1px rgb(243 238 228 / 0.18), 0 30px 60px -20px rgb(0 0 0 / 0.6); }
   .hv-saguaro { width: 19%; left: -7%; bottom: -2%; }
   .hv-nopal { width: 23%; right: -6%; bottom: -4%; }
   .hv-star-a { width: 30px; left: 4%; top: 18%; }

@@ -143,6 +143,36 @@ function heroIntro() {
   return () => tl.kill();
 }
 
+/* ------------------------------------------------------------------ hero: el amanecer */
+
+/**
+ * Al hacer scroll amanece: el sol sube por detrás de la foto, nace un halo dorado,
+ * el cielo pasa de pizarra a aurora (índigo → terracota) y la luna y las estrellas se apagan.
+ * El trazo del sol pasa de tiza a tinta oscura para leerse sobre el halo.
+ * Solo transform, opacity y color; el layout no cambia en ningún tamaño.
+ */
+function heroSunrise(isDesktop: boolean) {
+  const hero = document.getElementById('inicio');
+  const wrap = hero?.querySelector<HTMLElement>('[data-sun-wrap]');
+  if (!hero || !wrap) return;
+  const visual = hero.querySelector<HTMLElement>('.hero-visual')!;
+
+  // Escritorio: el hero cabe en una pantalla, así que se queda fijo (pin) mientras amanece y
+  // luego sigue. Móvil: el hero es más alto que la pantalla; el amanecer ocurre mientras la foto
+  // y el sol cruzan la pantalla, sin pin.
+  const scrollTrigger = isDesktop
+    ? { trigger: hero, start: 'top top', end: '+=75%', pin: true, anticipatePin: 1, scrub: 0.8, invalidateOnRefresh: true }
+    : { trigger: visual, start: 'top 80%', end: 'bottom 35%', scrub: 0.8, invalidateOnRefresh: true };
+
+  gsap
+    .timeline({ defaults: { ease: 'none' }, scrollTrigger })
+    .fromTo(wrap, { y: 0, scale: 1 }, { y: () => -wrap.offsetWidth * 0.34, scale: 1.08, duration: 1 }, 0)
+    .fromTo(hero.querySelector('[data-dawn-glow]'), { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.85, ease: 'power1.out' }, 0)
+    .fromTo(hero.querySelector('[data-sky]'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.9 }, 0.1)
+    .fromTo(hero.querySelector('[data-sun]'), { color: '#f3eee4' }, { color: '#3a1a08', duration: 0.25 }, 0.12)
+    .to($$('[data-night]', hero), { autoAlpha: 0, duration: 0.4 }, 0.05);
+}
+
 /* ------------------------------------------------------------------ parallax */
 
 function initParallax(isDesktop: boolean) {
@@ -321,6 +351,7 @@ mm.add(
       cleanups.push(initLenis());
       const killIntro = heroIntro();
       if (killIntro) cleanups.push(killIntro);
+      heroSunrise(desktop); // primero: su pin agrega espacio que los demás ScrollTriggers deben conocer
       initParallax(desktop);
       initReveals();
       initPapelPicado(window.__lenis ?? null);
