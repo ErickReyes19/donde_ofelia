@@ -1,0 +1,191 @@
+@import '@fontsource-variable/bricolage-grotesque/wdth.css';
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------
+   Tokens — ver DESIGN.md §3. Colores tomados del logo y los murales.
+   ------------------------------------------------------------------ */
+@theme {
+  --color-pizarra: #0b0a09;
+  --color-pizarra-2: #16140f;
+  --color-tiza: #f3eee4;
+  --color-tiza-muted: #b4ac9e;
+  --color-oro: #dec67e;
+  --color-nopal: #078500;
+  --color-nopal-hover: #0a9a05;
+  --color-nopal-claro: #2fb344;
+  --color-chile: #d20001;
+  --color-chile-claro: #ff3b30;
+  --color-turquesa: #2f6f74;
+  --color-turquesa-hondo: #245a5e;
+  --color-naranja: #de7e2a;
+
+  --font-sans: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ------------------------------------------------------------------
+   Base
+   ------------------------------------------------------------------ */
+@layer base {
+  :root {
+    --gutter: clamp(16px, 5vw, 120px);
+    --wrap: 1200px;
+    --section-y: clamp(96px, 12vw, 160px);
+    --header-h: 76px;
+    color-scheme: dark;
+  }
+
+  html {
+    background: var(--color-pizarra);
+    color: var(--color-tiza);
+    font-family: var(--font-sans);
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-padding-top: calc(var(--header-h) + 16px);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    min-height: 100svh;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--color-oro); color: var(--color-pizarra); }
+
+  :focus-visible {
+    outline: 2px solid var(--color-oro);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  img, svg { display: block; }
+}
+
+/* ------------------------------------------------------------------
+   Componentes compartidos
+   ------------------------------------------------------------------ */
+@layer components {
+  .wrap {
+    width: min(100% - 2 * var(--gutter), var(--wrap));
+    margin-inline: auto;
+  }
+
+  .section { padding-block: var(--section-y); position: relative; }
+
+  /* Titulares: Bricolage condensado, como rotulación de taquería */
+  .display {
+    font-stretch: 75%;
+    font-weight: 750;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+    font-variation-settings: 'opsz' 96;
+  }
+  .h1 { font-size: clamp(3rem, 1.6rem + 5.6vw, 5.5rem); }
+  .h2 { font-size: clamp(2.25rem, 1.5rem + 3vw, 3.5rem); line-height: 1; }
+  .h3 { font-size: 1.5rem; line-height: 1.2; font-stretch: 85%; font-weight: 650; }
+
+  .lead { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem); line-height: 1.55; max-width: 34em; }
+  .muted { color: var(--color-tiza-muted); }
+
+  /* Botones: un estilo principal (verde nopal) y uno secundario de contorno */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+    min-height: 48px; padding: 0 1.5rem;
+    border-radius: 999px;
+    font-weight: 600; font-size: 1rem; line-height: 1;
+    text-decoration: none; white-space: nowrap;
+    transition: transform 160ms var(--ease-out-quint), background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { transform: translateY(-1px); }
+  }
+  /* Presionar: escala 0.97 en 160ms ease-out (Emil Kowalski) */
+  .btn:active { transform: scale(0.97); }
+  .btn-primary { background: var(--color-nopal); color: #fff; }
+  .btn-primary:hover { background: var(--color-nopal-hover); }
+  .btn-ghost { border: 1px solid color-mix(in srgb, var(--color-tiza) 35%, transparent); color: var(--color-tiza); }
+  .btn-ghost:hover { border-color: var(--color-tiza); }
+
+  /* Enlace con subrayado que se dibuja */
+  .link {
+    color: inherit; text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+    padding-bottom: 2px;
+    transition: background-size 280ms var(--ease-out-quint);
+  }
+  .link:hover { background-size: 0% 1px; background-position: 100% 100%; }
+  .link-draw {
+    color: inherit; text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0% 1px no-repeat;
+    padding-bottom: 2px;
+    transition: background-size 280ms var(--ease-out-quint);
+  }
+  .link-draw:hover, .link-draw[aria-current='true'] { background-size: 100% 1px; }
+
+  /* Foto: marco recto que recorta el zoom en hover */
+  .ph { position: relative; overflow: hidden; background: var(--color-pizarra-2); }
+  .ph img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); }
+  .ph-zoom img { transition: transform 600ms var(--ease-out-quint); }
+  @media (hover: hover) and (pointer: fine) {
+    a:hover .ph-zoom img, .ph-zoom:hover img { transform: scale(1.03); }
+  }
+  /* Envoltura con margen para el parallax dentro del marco (data-parallax-img) */
+  .ph-pan { position: absolute; inset: -9% 0; }
+
+  .hairline { border-color: color-mix(in srgb, var(--color-tiza) 12%, transparent); }
+
+  /* Ilustraciones de trazo */
+  .ill { fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .ill .fill { fill: currentColor; stroke: none; }
+
+  .sr-only-focusable:not(:focus) {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Movimiento (Fase 4) — ver src/scripts/motion.ts
+   ------------------------------------------------------------------ */
+/* Lenis controla el scroll: el smooth nativo lo haría ir a saltos */
+html.lenis { scroll-behavior: auto; }
+/* Lenis bloquea el puntero en iframes; el mapa debe poder usarse */
+.lenis.lenis-smooth [data-map] iframe { pointer-events: auto; }
+
+/* Máscaras del revelado palabra por palabra */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.word { display: inline-block; }
+
+/* El hero se oculta hasta que la secuencia de entrada fija sus estados iniciales.
+   Si el JS falla, aparece solo a los 3 s. */
+html.intro [data-enter] {
+  visibility: hidden;
+  animation: intro-fallback 0s linear 3s forwards;
+}
+@keyframes intro-fallback { to { visibility: visible; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

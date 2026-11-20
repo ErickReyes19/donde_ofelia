@@ -1,0 +1,313 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { menu, favorites, price } from '../data/menu';
+import { restaurant as r } from '../data/restaurant';
+import PapelPicado from './illustrations/PapelPicado.astro';
+
+// Versiones de cada foto para la vista previa (desktop) generadas en el build.
+const previews = new Map<string, { src: string; srcset: string }>();
+for (const cat of menu) {
+  for (const item of cat.items) {
+    if (!item.image) continue;
+    const img = await getImage({ src: item.image, widths: [420, 640, 800], format: 'webp', quality: 78 });
+    previews.set(item.id, { src: img.src, srcset: img.srcSet.attribute });
+  }
+}
+const firstWithImage = (catId: string) => menu.find((c) => c.id === catId)?.items.find((i) => previews.has(i.id));
+---
+<section id="menu" class="section menu" aria-labelledby="menu-title">
+  <PapelPicado class="menu-papel" count={16} />
+
+  <div class="wrap">
+    <div class="head-row">
+      <h2 id="menu-title" class="display h2" data-reveal="words">El menú</h2>
+      <p class="muted max-w-[26rem] text-[1rem]">
+        Precios en lempiras. También para llevar y a domicilio.
+        <a class="link ml-1 text-tiza" href={r.orderUrl} target="_blank" rel="noopener">Pedir en línea</a>
+      </p>
+    </div>
+
+    <!-- Los favoritos de la casa -->
+    <h3 class="h3 mt-16">Los favoritos de la casa</h3>
+    <!-- Parallax multicapa: las columnas suben a distinta velocidad y cada foto se desliza en su marco -->
+    <ul class="favs mt-6" role="list" data-parallax-trigger>
+      {favorites.map((item, i) => (
+        <li data-speed={i % 2 ? '0.12' : '0.04'}>
+          <a class="fav" href={`#plato-${item.id}`} data-fav={item.id}>
+            <figure class="ph ph-zoom fav-photo">
+              {item.image && (
+                <div class="ph-pan" data-parallax-img="6">
+                  <Image src={item.image} alt={item.name} widths={[300, 450, 600]} sizes="(min-width: 1024px) 282px, 45vw" />
+                </div>
+              )}
+            </figure>
+            <span class="fav-meta mt-4">
+              <span class="text-[1.0625rem] font-semibold leading-snug">{item.name}</span>
+              <span class="price shrink-0">
+                {item.variants.length > 1 && <span class="font-normal text-tiza-muted">desde </span>}
+                {price(Math.min(...item.variants.map((v) => v.price)))}
+              </span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Carta completa -->
+    <div class="mt-20 md:mt-24" data-menu>
+      <div class="tabs-scroller">
+        <div class="tabs" data-tabs aria-label="Categorías del menú">
+          {menu.map((cat, i) => (
+            <a class="tab" href={`#m-${cat.id}`} id={`tab-${cat.id}`} data-tab={cat.id} aria-selected={i === 0 ? 'true' : 'false'}>
+              {cat.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {menu.map((cat) => {
+        const first = firstWithImage(cat.id);
+        const firstPrev = first ? previews.get(first.id) : undefined;
+        return (
+          <div class="panel" id={`m-${cat.id}`} data-panel={cat.id} aria-labelledby={`tab-${cat.id}`}>
+            <div class="panel-list">
+              <h3 class="h3">{cat.label}</h3>
+              {cat.note && <p class="muted mt-2 text-[1rem]">{cat.note}</p>}
+              <ul class="rows mt-6" role="list">
+                {cat.items.map((item) => {
+                  const p = previews.get(item.id);
+                  return (
+                    <li
+                      class="row"
+                      id={`plato-${item.id}`}
+                      data-row
+                      data-name={item.name}
+                      data-src={p?.src}
+                      data-srcset={p?.srcset}
+                    >
+                      {item.image ? (
+                        <span class="row-thumb ph" aria-hidden="true">
+                          <Image src={item.image} alt="" widths={[112, 168]} sizes="56px" />
+                        </span>
+                      ) : (
+                        <span class="row-thumb row-thumb--empty" aria-hidden="true" />
+                      )}
+                      <div class="min-w-0">
+                        <h4 class="row-name">
+                          {item.name}
+                          {item.isNew && <span class="tag">Nuevo</span>}
+                        </h4>
+                        {item.description && <p class="row-desc">{item.description}</p>}
+                        {item.variants.length > 1 && (
+                          <dl class="variants">
+                            {item.variants.map((v) => (
+                              <div>
+                                <dt>{v.name}</dt>
+                                <dd class="price">{price(v.price)}</dd>
+                              </div>
+                            ))}
+                          </dl>
+                        )}
+                      </div>
+                      {item.variants.length === 1 && <p class="price row-price">{price(item.variants[0].price)}</p>}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <figure class="panel-preview ph" aria-hidden="true">
+              {firstPrev && (
+                <img
+                  src={firstPrev.src}
+                  srcset={firstPrev.srcset}
+                  sizes="(min-width: 1024px) 40vw, 1px"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  data-preview
+                />
+              )}
+            </figure>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* clip (no hidden) para que funcionen las pestañas y la vista previa sticky */
+  .menu { overflow-x: clip; }
+  .menu-papel {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: max(100%, 1100px); height: auto;
+  }
+  .menu > .wrap { padding-top: clamp(40px, 5vw, 72px); }
+
+  .head-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 48px; }
+
+  .price { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+
+  /* Favoritos: fotos de estudio, fondo claro, como platos sobre la mesa */
+  .favs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+  .fav { display: block; text-decoration: none; transition: transform 220ms var(--ease-out-quint); }
+  .fav:hover { transform: translateY(-2px); }
+  .fav-photo { aspect-ratio: 1; background: #e9e6e1; }
+  .fav-meta { display: flex; flex-direction: column; gap: 2px; }
+  @media (min-width: 640px) { .fav-meta { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 16px; } }
+  @media (min-width: 1024px) { .favs { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; } }
+
+  /* Pestañas (chips). Sin JS son enlaces a cada categoría. */
+  .tabs-scroller { position: sticky; top: var(--header-h); z-index: 5; background: var(--color-pizarra); margin-inline: calc(-1 * var(--gutter)); padding: 12px var(--gutter); border-bottom: 1px solid color-mix(in srgb, var(--color-tiza) 10%, transparent); }
+  .tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: none; scroll-snap-align: start;
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+    border-radius: 999px; border: 1px solid color-mix(in srgb, var(--color-tiza) 22%, transparent);
+    font-size: 0.98rem; font-weight: 500; text-decoration: none; white-space: nowrap;
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+  }
+  .tab:hover { border-color: var(--color-tiza); }
+  .tab[aria-selected='true'] { background: var(--color-tiza); color: var(--color-pizarra); border-color: var(--color-tiza); }
+
+  .panel { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; padding-top: 40px; }
+  .panel + .panel { margin-top: 24px; }
+  /* Al cambiar de pestaña, la categoría entra rápido (se usa muchas veces: 220 ms) */
+  :global([data-menu-ready]) .panel:not([hidden]) { animation: panel-in 220ms var(--ease-out-quint); }
+  @keyframes panel-in { from { opacity: 0; transform: translateY(8px); } }
+  :global([data-menu-ready]) .panel + .panel { margin-top: 0; }
+  .panel-list { grid-column: 1 / -1; }
+  .panel-preview { display: none; }
+
+  .rows { border-top: 1px solid color-mix(in srgb, var(--color-tiza) 12%, transparent); }
+  .row {
+    display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 16px; align-items: start;
+    padding: 18px 0; border-bottom: 1px solid color-mix(in srgb, var(--color-tiza) 12%, transparent);
+    scroll-margin-top: calc(var(--header-h) + 90px);
+  }
+  .row-thumb { width: 56px; height: 56px; background: #e9e6e1; }
+  .row-thumb--empty { background: none; }
+  .row-name { font-size: 1.0625rem; font-weight: 600; line-height: 1.35; }
+  .row-desc { margin-top: 4px; font-size: 1rem; line-height: 1.55; color: var(--color-tiza-muted); max-width: 40em; }
+  .row-price { padding-top: 1px; }
+  .tag {
+    display: inline-block; margin-left: 8px; padding: 2px 8px; vertical-align: 2px;
+    border-radius: 999px; background: var(--color-chile); color: #fff;
+    font-size: 0.75rem; font-weight: 600; line-height: 1.4;
+  }
+  .variants { margin-top: 10px; display: grid; gap: 4px; font-size: 1rem; }
+  .variants > div { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px dashed color-mix(in srgb, var(--color-tiza) 14%, transparent); padding-bottom: 4px; }
+  .variants dt { color: var(--color-tiza-muted); }
+  .row:target { background: color-mix(in srgb, var(--color-oro) 10%, transparent); }
+
+  @media (min-width: 1024px) {
+    .panel-list { grid-column: 1 / span 7; }
+    .panel-preview {
+      display: block; grid-column: 9 / span 4; position: sticky; top: calc(var(--header-h) + 96px);
+      align-self: start; aspect-ratio: 4 / 5; margin-top: 64px; background: #e9e6e1;
+    }
+    .panel-preview img { transition: opacity 240ms var(--ease-out-quint), filter 240ms ease; }
+    .panel-preview img.is-swapping { opacity: 0.4; filter: blur(6px); transition-duration: 90ms; }
+    .row { grid-template-columns: minmax(0, 1fr) auto; }
+    .row-thumb { display: none; }
+    .row[data-active] .row-name { color: var(--color-oro); }
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-menu]');
+  if (root) {
+    const tablist = root.querySelector<HTMLElement>('[data-tabs]')!;
+    const tabs = [...root.querySelectorAll<HTMLAnchorElement>('[data-tab]')];
+    const panels = [...root.querySelectorAll<HTMLElement>('[data-panel]')];
+
+    // Mejora progresiva: los enlaces se vuelven pestañas accesibles
+    tablist.setAttribute('role', 'tablist');
+    tabs.forEach((tab) => {
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', `m-${tab.dataset.tab}`);
+    });
+    panels.forEach((p) => p.setAttribute('role', 'tabpanel'));
+    root.setAttribute('data-menu-ready', '');
+
+    function select(id: string, { focus = false, scroll = false } = {}) {
+      tabs.forEach((tab) => {
+        const on = tab.dataset.tab === id;
+        tab.setAttribute('aria-selected', String(on));
+        tab.tabIndex = on ? 0 : -1;
+        if (on) {
+          // Desplaza solo la fila de pestañas, nunca la página
+          const t = tab.getBoundingClientRect(), l = tablist.getBoundingClientRect();
+          const left = tablist.scrollLeft + (t.left - l.left) - (l.width - t.width) / 2;
+          tablist.scrollTo({ left, behavior: 'smooth' });
+          if (focus) tab.focus({ preventScroll: true });
+        }
+      });
+      panels.forEach((p) => (p.hidden = p.dataset.panel !== id));
+      window.dispatchEvent(new Event('menu:change')); // ScrollTrigger recalcula posiciones
+      if (scroll) {
+        // Si la barra de pestañas está pegada arriba, volver al inicio de la categoría
+        const bar = tablist.closest<HTMLElement>('.tabs-scroller')!;
+        const headerH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 76;
+        const panel = panels.find((p) => p.dataset.panel === id)!;
+        if (bar.getBoundingClientRect().top <= headerH + 1) {
+          const y = panel.getBoundingClientRect().top + window.scrollY - headerH - bar.offsetHeight + 1;
+          window.__lenis ? window.__lenis.scrollTo(y, { duration: 0.6 }) : window.scrollTo({ top: y });
+        }
+      }
+    }
+    select(tabs[0].dataset.tab!);
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        select(tab.dataset.tab!, { scroll: true });
+      });
+      tab.addEventListener('keydown', (e) => {
+        const keys: Record<string, number> = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+        if (!(e.key in keys)) return;
+        e.preventDefault();
+        const next = tabs[(keys[e.key] + tabs.length) % tabs.length];
+        select(next.dataset.tab!, { focus: true, scroll: true });
+      });
+    });
+
+    // Los favoritos abren la categoría correcta y marcan el platillo
+    document.querySelectorAll<HTMLAnchorElement>('[data-fav]').forEach((a) => {
+      a.addEventListener('click', () => {
+        const row = document.getElementById(`plato-${a.dataset.fav}`);
+        const panel = row?.closest<HTMLElement>('[data-panel]');
+        if (panel) select(panel.dataset.panel!);
+      });
+    });
+    // Si se llega con un enlace directo a un platillo
+    if (location.hash.startsWith('#plato-')) {
+      const panel = document.querySelector(location.hash)?.closest<HTMLElement>('[data-panel]');
+      if (panel) select(panel.dataset.panel!);
+    }
+
+    // Vista previa: la foto del platillo bajo el cursor (desktop)
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    panels.forEach((panel) => {
+      const img = panel.querySelector<HTMLImageElement>('[data-preview]');
+      if (!img) return;
+      panel.querySelectorAll<HTMLElement>('[data-row]').forEach((row) => {
+        if (!row.dataset.src) return;
+        row.addEventListener('pointerenter', () => {
+          if (!desktop.matches || img.dataset.current === row.id) return;
+          panel.querySelectorAll('[data-active]').forEach((r) => r.removeAttribute('data-active'));
+          row.setAttribute('data-active', '');
+          img.dataset.current = row.id;
+          // Fundido con un poco de desenfoque para que el cambio de foto no "salte" (Emil Kowalski)
+          img.classList.add('is-swapping');
+          img.srcset = row.dataset.srcset!;
+          img.src = row.dataset.src!;
+          const done = () => img.classList.remove('is-swapping');
+          if (img.complete) requestAnimationFrame(done);
+          else img.addEventListener('load', done, { once: true });
+        });
+      });
+    });
+  }
+</script>

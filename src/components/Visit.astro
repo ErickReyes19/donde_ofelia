@@ -1,0 +1,111 @@
+---
+import { restaurant as r, hoursLabel, happyHourLabel } from '../data/restaurant';
+import OpenStatus from './OpenStatus.astro';
+import Sun from './illustrations/Sun.astro';
+import Nopal from './illustrations/Nopal.astro';
+import Agave from './illustrations/Agave.astro';
+---
+<section id="visitanos" class="section visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <h2 id="visit-title" class="display h2" data-reveal="words">Visítanos</h2>
+    <!-- Momento tipográfico: la dirección en grande -->
+    <p class="type-moment display mt-6" data-reveal="words">
+      <a class="link-draw" href={r.mapsUrl} target="_blank" rel="noopener">{r.address.street}, {r.address.district}</a>
+    </p>
+
+    <div class="visit-grid mt-14">
+      <div class="visit-info">
+        <OpenStatus class="text-[1.0625rem] font-medium" />
+
+        <div class="info-cols mt-8">
+          <div>
+            <h3 class="info-label">Dirección</h3>
+            <p>{r.address.street}, {r.address.between}.</p>
+            <p class="muted">{r.address.landmark}. {r.address.district}, {r.address.city}.</p>
+          </div>
+          <div>
+            <h3 class="info-label">Horario</h3>
+            <p>Todos los días, de {hoursLabel}</p>
+            <p class="muted">Hora feliz: {happyHourLabel}</p>
+            <p class="muted">{r.combosNote}</p>
+          </div>
+          <div>
+            <h3 class="info-label">Teléfono y WhatsApp</h3>
+            <p><a class="link" href={`tel:${r.phones.main.e164}`}>+504 {r.phones.main.display}</a></p>
+            <p class="muted">Pedidos: <a class="link text-tiza" href={`https://wa.me/${r.phones.orders.wa}`} target="_blank" rel="noopener">+504 {r.phones.orders.display}</a></p>
+          </div>
+          <div>
+            <h3 class="info-label">Para llevar y a domicilio</h3>
+            <p><a class="link" href={r.orderUrl} target="_blank" rel="noopener">Pedir en línea</a></p>
+            <p class="muted">También por PedidosYa.</p>
+          </div>
+        </div>
+
+        <a class="btn btn-ghost mt-10" href={r.directionsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+
+      <div class="map" data-map>
+        <div class="map-facade" data-map-facade>
+          <div class="map-ill" aria-hidden="true">
+            <Sun class="map-sun text-tiza" glow={false} data-spin="75" />
+            <Nopal class="map-nopal text-tiza" />
+            <Agave class="map-agave text-tiza" />
+          </div>
+          <div class="relative z-10 text-center">
+            <p class="text-[1.0625rem] font-medium">{r.address.street}, {r.address.district}</p>
+            <p class="muted mt-1 text-[0.9375rem]">El mapa de Google se carga solo si lo pides.</p>
+            <button type="button" class="btn btn-ghost mt-5 bg-pizarra" data-map-load data-src={r.mapEmbedUrl}>Ver el mapa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .type-moment {
+    font-size: clamp(2.75rem, 1.4rem + 5.6vw, 6.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--color-tiza);
+  }
+  .type-moment a { background-size: 0% 3px; background-image: linear-gradient(var(--color-chile), var(--color-chile)); padding-bottom: 6px; }
+  .type-moment a:hover { background-size: 100% 3px; }
+
+  .visit-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 48px; }
+  .visit-info { grid-column: 1 / -1; }
+  .map { grid-column: 1 / -1; position: relative; aspect-ratio: 4 / 3; background: var(--color-pizarra-2); border: 1px solid color-mix(in srgb, var(--color-tiza) 10%, transparent); overflow: hidden; }
+
+  .info-cols { display: grid; gap: 28px 32px; font-size: 1.0625rem; line-height: 1.55; }
+  .info-cols > div { display: grid; gap: 4px; align-content: start; }
+  .info-label { font-size: 0.875rem; font-weight: 600; color: var(--color-oro); margin-bottom: 4px; }
+
+  .map-facade { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; }
+  .map-ill { position: absolute; inset: 0; --ill-bg: var(--color-pizarra-2); opacity: .5; }
+  .map-sun { position: absolute; width: 46%; left: 27%; top: -18%; }
+  .map-nopal { position: absolute; width: 22%; left: 6%; bottom: -4%; }
+  .map-agave { position: absolute; width: 30%; right: 4%; bottom: -2px; }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.2) contrast(1.05); }
+
+  @media (min-width: 640px) { .info-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) {
+    .visit-info { grid-column: 1 / span 6; }
+    .map { grid-column: 8 / span 5; aspect-ratio: 4 / 5; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-map-load]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const map = btn.closest('[data-map]')!;
+      const iframe = document.createElement('iframe');
+      iframe.src = btn.dataset.src!;
+      iframe.title = 'Mapa de Donde Ofelia, Barrio Los Andes, San Pedro Sula';
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      map.querySelector('[data-map-facade]')?.remove();
+      map.append(iframe);
+      iframe.focus();
+    });
+  });
+</script>

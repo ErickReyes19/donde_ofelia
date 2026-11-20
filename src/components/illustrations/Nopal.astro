@@ -1,0 +1,30 @@
+---
+// Nopal con tunas (ilustración original de línea).
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+
+// Espinas: puntos sobre la penca de abajo
+const spines: [number, number][] = [];
+for (let row = 0; row < 5; row++) {
+  for (let col = 0; col < 4; col++) {
+    const x = 84 + col * 17 + (row % 2) * 8;
+    const y = 160 + row * 18;
+    if (((x - 110) / 40) ** 2 + ((y - 196) / 50) ** 2 < 1) spines.push([x, y]);
+  }
+}
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 220 260" aria-hidden="true" focusable="false">
+  <ellipse class="occlude" cx="104" cy="60" rx="24" ry="34" transform="rotate(-8 104 60)" pathLength="1" />
+  <ellipse class="occlude" cx="91" cy="27" rx="7" ry="9" pathLength="1" />
+  <ellipse class="occlude" cx="115" cy="25" rx="7" ry="9" pathLength="1" />
+  <ellipse class="occlude" cx="64" cy="118" rx="32" ry="44" transform="rotate(-28 64 118)" pathLength="1" />
+  <ellipse class="occlude" cx="156" cy="112" rx="30" ry="42" transform="rotate(24 156 112)" pathLength="1" />
+  <ellipse class="occlude" cx="110" cy="196" rx="46" ry="58" pathLength="1" />
+  {spines.map(([x, y]) => <circle class="fill" cx={x} cy={y} r="1.8" />)}
+  <circle class="fill" cx="58" cy="108" r="1.8" /><circle class="fill" cx="72" cy="126" r="1.8" /><circle class="fill" cx="60" cy="136" r="1.8" />
+  <circle class="fill" cx="150" cy="104" r="1.8" /><circle class="fill" cx="162" cy="120" r="1.8" /><circle class="fill" cx="148" cy="128" r="1.8" />
+</svg>
+
+<style>
+  .occlude { fill: var(--ill-bg, var(--color-pizarra)); }
+</style>

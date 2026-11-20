@@ -1,0 +1,2159 @@
+[
+  {
+    "category": "COMBOS LUNES A JUEVES 12 a 3",
+    "categorySlug": "combos-lunes-a-jueves-12-a-3",
+    "name": "MexiCombo 1",
+    "slug": "mexicombo-1",
+    "description": "1 Gringa al Pastor 2 Tacos de Birria 1 Bebida",
+    "variants": [
+      {
+        "name": null,
+        "price": 279
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/5f2c3051-aa49-4568-abc7-e1b57b977c29.jpeg",
+    "localImage": "../assets/menu/combos-lunes-a-jueves-12-a-3/mexicombo-1.jpeg"
+  },
+  {
+    "category": "COMBOS LUNES A JUEVES 12 a 3",
+    "categorySlug": "combos-lunes-a-jueves-12-a-3",
+    "name": "MexiCombo 2",
+    "slug": "mexicombo-2",
+    "description": "1 Nacho Donde Ofelia (pequeños) Pollo, Carnita o Cochinita 2 Tacos de tu eleccion 1 Bebida",
+    "variants": [
+      {
+        "name": null,
+        "price": 309
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/05e8abb0-19fd-4842-bf5a-dfec68049a04.jpeg",
+    "localImage": "../assets/menu/combos-lunes-a-jueves-12-a-3/mexicombo-2.jpeg"
+  },
+  {
+    "category": "COMBOS LUNES A JUEVES 12 a 3",
+    "categorySlug": "combos-lunes-a-jueves-12-a-3",
+    "name": "MexiCombo 3",
+    "slug": "mexicombo-3",
+    "description": "1 Sopa de Tortilla (pequeña) 2 Tacos de tu eleccion 1 Bebida",
+    "variants": [
+      {
+        "name": null,
+        "price": 329
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/30fae9d9-fec3-4e29-bb49-ebf3a5ddb422.jpeg",
+    "localImage": "../assets/menu/combos-lunes-a-jueves-12-a-3/mexicombo-3.jpeg"
+  },
+  {
+    "category": "Promos (NO APLICA A DOMICILIO)",
+    "categorySlug": "promos-no-aplica-a-domicilio",
+    "name": "Cubetazo",
+    "slug": "cubetazo",
+    "description": "",
+    "variants": [
+      {
+        "name": "Cubetazo Nacional",
+        "price": 260
+      },
+      {
+        "name": "Cubetazo Corona, Ultra o Modelo",
+        "price": 370
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/be19726b-95ee-4651-acb2-3a215b1ffe80.jfif",
+    "localImage": "../assets/menu/promos-no-aplica-a-domicilio/cubetazo.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Botana Donde Ofelia",
+    "slug": "botana-donde-ofelia",
+    "description": "Cazuela de frijoles fundidos con totopos acompañada de una orden de flautas, una sincronizada en triángulos, dos deliciosos tacos y chimole y sus salsas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 565
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/44a29b37-a00a-4c9a-8aa8-b0849140fd8f.jpg",
+    "localImage": "../assets/menu/botanas/botana-donde-ofelia.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Chil-Ofes",
+    "slug": "chil-ofes",
+    "description": "Cuatro jalapeños empanizados y y rellenos de queso bañados en salsa verde.",
+    "variants": [
+      {
+        "name": null,
+        "price": 165
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/6e6711a4-d899-43ae-966e-c2ed7709dee6.jpg",
+    "localImage": "../assets/menu/botanas/chil-ofes.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Chiles Capeados",
+    "slug": "chiles-capeados",
+    "description": "Cuatro jalapeños enhuevados rellenos de queso y bañados en salsa roja 😋",
+    "variants": [
+      {
+        "name": null,
+        "price": 165
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/ed8029f6-283c-4271-b49f-92013aeb42d7.jpg",
+    "localImage": "../assets/menu/botanas/chiles-capeados.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Guacamole",
+    "slug": "guacamole",
+    "description": "Guacamole al estilo único único Donde Ofelia acompañado de totopos y salsas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 185
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/a27c9788-fb8d-40c9-883d-6b4cf61c7011.jpg",
+    "localImage": "../assets/menu/botanas/guacamole.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Orden de Cebollitas asadas",
+    "slug": "orden-de-cebollitas-asadas",
+    "description": "Cebollas asadas al estilo Donde Ofelia acompañado de totopos.",
+    "variants": [
+      {
+        "name": null,
+        "price": 98
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/eb4e592f-a825-43c5-ad7a-b0c3fcbad17b.jpg",
+    "localImage": "../assets/menu/botanas/orden-de-cebollitas-asadas.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Cazuela de frijoles fundidos",
+    "slug": "cazuela-de-frijoles-fundidos",
+    "description": "Orden pequeña de frijoles fritos con queso derretido y crema acompañado de totopos.",
+    "variants": [
+      {
+        "name": null,
+        "price": 145
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Fundido de Queso con Chorizo💣NUEVO",
+    "slug": "fundido-de-queso-con-chorizonuevo",
+    "description": "Cazuela de Queso fundido acompañado de chorizo y sus totopos.",
+    "variants": [
+      {
+        "name": null,
+        "price": 235
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/0a5f4216-3ae5-407e-ade0-c4ff94a98204.jpg",
+    "localImage": "../assets/menu/botanas/fundido-de-queso-con-chorizonuevo.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Frijoles fundidos con Chorizo y Rajas",
+    "slug": "frijoles-fundidos-con-chorizo-y-rajas",
+    "description": "Cazuela de frijoles fundidos con queso, crema, chorizo y rajas de chile dulce y cebolla. Acompañado de totopos y tortillas calientes.",
+    "variants": [
+      {
+        "name": null,
+        "price": 265
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/fe764312-27ab-4c4a-9cf6-b0159620eccc.jpg",
+    "localImage": "../assets/menu/botanas/frijoles-fundidos-con-chorizo-y-rajas.jpg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Chalupas",
+    "slug": "chalupas",
+    "description": "Orden de 6 canastitas de maíz fritas, rellenas de frijoles y carne de puerco o pollo, cubiertas con salsa, chimol y queso rallado. Una delicia 😋",
+    "variants": [
+      {
+        "name": "Orden de 6",
+        "price": 225
+      },
+      {
+        "name": "Orden de 8",
+        "price": 265
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Alitas",
+    "slug": "alitas",
+    "description": "Pidelas con Salsa Chipotle o Barbacoa.",
+    "variants": [
+      {
+        "name": "8 Unidades",
+        "price": 240
+      },
+      {
+        "name": "12 Unidades",
+        "price": 360
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/f6a2e26a-76be-4fa9-bf33-da97994bda56.jpeg",
+    "localImage": "../assets/menu/botanas/alitas.jpeg"
+  },
+  {
+    "category": "Botanas",
+    "categorySlug": "botanas",
+    "name": "Guacamole Ranchero",
+    "slug": "guacamole-ranchero",
+    "description": "Guacamole con Chicharron",
+    "variants": [
+      {
+        "name": null,
+        "price": 285
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/3c52113d-4f07-4ec1-85a6-b454e853ab43.jpg",
+    "localImage": "../assets/menu/botanas/guacamole-ranchero.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "La Estación del Taco 📢(NUEVO)",
+    "slug": "la-estacion-del-taco-nuevo",
+    "description": "16 Deliciosos Tacos tal y como a ti te gustan; Pastor, Lomo, Suadero y Cochinita pibil. Acompañado de tus salsas favoritas y Guacamole al estilo Donde Ofelia. Ideal para 4 personas o menos😉",
+    "variants": [
+      {
+        "name": null,
+        "price": 859
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/51d3629c-3979-44d5-8910-2a919dce3d25.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/la-estacion-del-taco-nuevo.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos al Pastor",
+    "slug": "tacos-al-pastor",
+    "description": "Orden de tres tacos. Lomo de cerdo marinado con tres chiles, acompañado de cebolla, cilantro, salsa roja y sus mejores amigos el limón y la piña.",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/1945ca02-b7b4-43b5-a077-3eff01270823.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-al-pastor.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Carnita",
+    "slug": "tacos-de-carnita",
+    "description": "Orden de 3 tacos. Deliciosa carne de cerdo adobada y al horno. Servida con salsa verde y chimol.",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/03dade13-f4ec-4bd2-b9c1-8cf3fe16dc8f.jpeg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-carnita.jpeg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Cochinita Pibil",
+    "slug": "tacos-de-cochinita-pibil",
+    "description": "Orden de 3 tacos. Pierna de cerdo adobada con chiles y especias. Servido con tantito encurtido y su salsa roja.",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/ebeb4a93-8786-4f64-8e52-ca76439cbda6.jpeg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-cochinita-pibil.jpeg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Pollo al gusto",
+    "slug": "tacos-de-pollo-al-gusto",
+    "description": "Orden de 3 tacos. Delicioso pollo desmenuzado y a la plancha servido con chimol y salsa de tu gusto.",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/0ed96c6d-87b1-4a12-bf1f-aa5cdb5720cd.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-pollo-al-gusto.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Pollo a la Chipotle",
+    "slug": "tacos-de-pollo-a-la-chipotle",
+    "description": "Orden de 3 tacos. Pechuga de pollo desmenuzada en salsa de chile chipotle picantito con cebolla y chile en rajas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/995475ca-2f1f-41fa-92d4-e1198c75cfd6.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-pollo-a-la-chipotle.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Pollo con mole",
+    "slug": "tacos-de-pollo-con-mole",
+    "description": "Orden de 3 tacos. Pechuga de pollo desmenuzado ahogado en mole poblano. \"Un misterio a tu paladar\"",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/3c069358-c108-4bc2-92ea-a2cf3a8cd232.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-pollo-con-mole.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Chicharron en Salsa Verde",
+    "slug": "tacos-de-chicharron-en-salsa-verde",
+    "description": "Orden de 3 tacos. Guiso de chicharron en salsa verde de tradición mexicana. Servido con cebolla y cilantro.",
+    "variants": [
+      {
+        "name": null,
+        "price": 147
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/b00f9df8-5fbc-4fd8-aa43-20a70a3456e6.jpeg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-chicharron-en-salsa-verde.jpeg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Bistec al carbon",
+    "slug": "tacos-de-bistec-al-carbon",
+    "description": "Orden de 3 tacos. Lomo de res en trocitos servido con cilantro, cebolla y salsa verde.",
+    "variants": [
+      {
+        "name": null,
+        "price": 165
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/16ff0ded-d3a3-40ea-ace0-40aabad7c841.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-bistec-al-carbon.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Chorizo Asado",
+    "slug": "tacos-de-chorizo-asado",
+    "description": "Orden de 3 tacos. Trozos de chorizo asado servido con cebolla, cilantro y salsa verde.",
+    "variants": [
+      {
+        "name": null,
+        "price": 165
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/79122a03-e343-4799-b5f3-c4023794c4dc.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-chorizo-asado.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Birria",
+    "slug": "tacos-de-birria",
+    "description": "Orden de 3 tacos. Deliciosa carne de res adobado con una preparación de chiles y jitomates. Queso derretido abundante carne, cebolla, cilantro y su famoso consome para acompañar en cada bocado.",
+    "variants": [
+      {
+        "name": null,
+        "price": 245
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/b522300f-4420-494a-b625-5c4c422aa266.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-birria.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de Suadero",
+    "slug": "tacos-de-suadero",
+    "description": "Orden de 3 tacos. Deliciosa carne de res confitada más de dos horas acompañado de unos ricos cebollines asados y su salsa roja al estilo chilango.",
+    "variants": [
+      {
+        "name": null,
+        "price": 196
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/0d825a72-7908-4743-83f6-6cabbad1535c.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-suadero.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos Gobernador",
+    "slug": "tacos-gobernador",
+    "description": "Orden de 3 tacos. Disfruta de nuestros tacos de camarones con queso derretido, pimentón, cebolla, jitomate y su toque a chipotle.",
+    "variants": [
+      {
+        "name": null,
+        "price": 235
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/06825962-33f9-446a-bc3e-1ff9f19c2599.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-gobernador.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos Keto",
+    "slug": "tacos-keto",
+    "description": "Tres deliciosos tacos de lechuga con su carne de tu elección, cilantro cebolla y su salsa.",
+    "variants": [
+      {
+        "name": null,
+        "price": 145
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/7794ca54-5dc6-4be5-b227-421d58476a9d.jpg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-keto.jpg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos Campechanos",
+    "slug": "tacos-campechanos",
+    "description": "Deliciosa combinación de carnes suadero y chorizo con su jardín y cebollas asadas. Acompañado de su salsa chipotle o verde.",
+    "variants": [
+      {
+        "name": null,
+        "price": 205
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/d7d426c2-c24a-468f-b0c4-6c0e25ecc8e3.png",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-campechanos.png"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos Emperadores",
+    "slug": "tacos-emperadores",
+    "description": "Orden de tres deliciosos Quesatacos de Camarón con chorizo! La combinación perfecta de sabores que te dejará sin palabras.",
+    "variants": [
+      {
+        "name": null,
+        "price": 275
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/c0d3e3c8-8216-4f73-96e1-d8887fa5d7dd.jpeg",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-emperadores.jpeg"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos de lengua de res",
+    "slug": "tacos-de-lengua-de-res",
+    "description": "Tiernos cortes de lengua de res cocidos lentamente, servidos en tortilla de maíz con cebolla, cilantro y salsa al gusto.",
+    "variants": [
+      {
+        "name": null,
+        "price": 165
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/a1c53af1-be2d-4cdc-9884-01e80e8f2b2b.png",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-de-lengua-de-res.png"
+  },
+  {
+    "category": "Amor al primer Taco 🌮",
+    "categorySlug": "amor-al-primer-taco",
+    "name": "Tacos Mar y Tierra",
+    "slug": "tacos-mar-y-tierra",
+    "description": "Tortillas doradas con una cama de guacamole, lomito y camarones acompañado de su salsa habanero y piña (ojo que pica)",
+    "variants": [
+      {
+        "name": null,
+        "price": 345
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/231a65a9-eea1-4e9b-b5af-0463d04fe64d.png",
+    "localImage": "../assets/menu/amor-al-primer-taco/tacos-mar-y-tierra.png"
+  },
+  {
+    "category": "Sopas Aztecas 🍲",
+    "categorySlug": "sopas-aztecas",
+    "name": "Sopa de Tortilla",
+    "slug": "sopa-de-tortilla",
+    "description": "Caldo sazonado con jitomates y chile pasilla, pollo, queso, acompañado con tiras de tortillas crujientes, crema, aguacate y su chicharron. No te pases de lanza!!!!",
+    "variants": [
+      {
+        "name": "Normal 24 oz.",
+        "price": 220
+      },
+      {
+        "name": "Grande 32 oz.",
+        "price": 255
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/2dd0d3e2-5ca3-4793-ac39-57765f3007a2.jpg",
+    "localImage": "../assets/menu/sopas-aztecas/sopa-de-tortilla.jpg"
+  },
+  {
+    "category": "Sopas Aztecas 🍲",
+    "categorySlug": "sopas-aztecas",
+    "name": "Pozole Estilo Guerrero",
+    "slug": "pozole-estilo-guerrero",
+    "description": "Sopa hecha a base de granos de maíz reventado con carne de cerdo acompañada de aguacate, chicharrones, tortilla tostada, cebolla, chile jalapeño, oregano, limón. La especialidad de la casa.",
+    "variants": [
+      {
+        "name": "Normal 24 oz",
+        "price": 220
+      },
+      {
+        "name": "Grande 32 oz",
+        "price": 255
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/485a4e10-1d17-483b-923f-0aabee8be3d5.jpg",
+    "localImage": "../assets/menu/sopas-aztecas/pozole-estilo-guerrero.jpg"
+  },
+  {
+    "category": "Sopas Aztecas 🍲",
+    "categorySlug": "sopas-aztecas",
+    "name": "Frijoles Charros 🚨Nuevo🚨",
+    "slug": "frijoles-charros-nuevo",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 195
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/57bc0da4-5616-4df9-94c2-47beecdd3cf6.jpeg",
+    "localImage": "../assets/menu/sopas-aztecas/frijoles-charros-nuevo.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Parrillada de Tacos",
+    "slug": "parrillada-de-tacos",
+    "description": "Abundantes carnes de pastor, carnita, cochinita pibil, pollo, con cebolla y chile dulce en rajas, acompañada de una cazuelita de chicharron en salsa verde y otra de frijoles fundidos, todas nuestras salsas y 30 tortillas recién hechas.",
+    "variants": [
+      {
+        "name": "6 Personas (30 tortillas)",
+        "price": 1795
+      },
+      {
+        "name": "4 Personas (20 tortillas)",
+        "price": 1195
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/43c1420b-f7cb-494c-bff8-0467a224cd5f.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/parrillada-de-tacos.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Birriada Donde Ofelia",
+    "slug": "birriada-donde-ofelia",
+    "description": "Diez deliciosos tacos de birria acompañado de dos gringas al pastor partidas por mitad y media porción de nachos para botanear. Esto y sus acompañantes. Ideal para 4 o 5 personas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 1245
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/0bc1f7ed-b412-45cf-8b20-529a45f272e6.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/birriada-donde-ofelia.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "El Molcajetazo 📢(NUEVO)",
+    "slug": "el-molcajetazo-nuevo",
+    "description": "Delicioso alambre de asada, pastor, chorizo, pollo, acompañado de tiras de cebolla y pimenton con mucho queso derretido, aguacate, tu jalapeño bien toreado pa que amarre, 10 tortillas de maiz bien calientitas y de paso unas olvidadas. Ideal para dos. Te encantara",
+    "variants": [
+      {
+        "name": null,
+        "price": 765
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/361f5fb8-3c9d-42c0-b522-b171a28e7e6c.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/el-molcajetazo-nuevo.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Filetazo",
+    "slug": "filetazo",
+    "description": "8 Onzas de Filete de Res, acompañado de frijolitos fritos y tortillas de maiz recien calientitas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 285
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Filete Tampiqueño 📢(NUEVO)",
+    "slug": "filete-tampiqueno-nuevo",
+    "description": "8 Onzas de Filete de Res, acompañado de tiras de tocino, frijolitos, aguacate y nuestros chilaquiles gratinados al estilo Donde Ofelia",
+    "variants": [
+      {
+        "name": null,
+        "price": 495
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/57ec66f2-ab08-458c-b55e-263b02129ba0.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/filete-tampiqueno-nuevo.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Molcajete 📢(NUEVO)",
+    "slug": "molcajete-nuevo",
+    "description": "Molcajete mixto caliente servido con carne de res, pollo, cerdo, camarones, cebollitas y chorizo ahogados en salsa mexicana con queso fundido y coronado con un chile toreado, cilantro y queso fresco y no puede faltar sus acompañantes frijoles, arroz mexicano, tortillas de maiz calientitas y mas, listo para compartir.",
+    "variants": [
+      {
+        "name": "Personal",
+        "price": 655
+      },
+      {
+        "name": "de 2 a 3 personas",
+        "price": 860
+      },
+      {
+        "name": "de 4 a 5 Personas",
+        "price": 1275
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/1c1bac31-a579-4780-ba62-260abd365237.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/molcajete-nuevo.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Lomo a la tampiqueña",
+    "slug": "lomo-a-la-tampiquena",
+    "description": "Corte tampiqueño de res de 8 oz. con unas tiras de tocino; Acompañado de unos deliciosos chilaquiles, frijoles, totopos, aguacate, salsa verde y una lasca de limon.",
+    "variants": [
+      {
+        "name": null,
+        "price": 398
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/482d1475-3639-4ed0-a66c-776de0942661.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/lomo-a-la-tampiquena.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Bombazo 💣",
+    "slug": "bombazo",
+    "description": "Exquisita combinación de cuatro carnes: Pastor, carnita, cochinita pibil y pollo. Con rajas de cebolla y chile dulce. Todo fundido en queso y montado sobre 6 tortillas de maiz. Acompañado de 2 salsas y chimol. Irresistible...",
+    "variants": [
+      {
+        "name": null,
+        "price": 395
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/e5142ead-c1c9-47ed-b00c-9b0754007250.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/bombazo.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Que me ves",
+    "slug": "que-me-ves",
+    "description": "Deliciosa combinación de pastor, bistec, chorizo y más. Servido sobre 6 tortillas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 385
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/bb4f1f64-64db-4a16-852a-5b0511c99c24.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/que-me-ves.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Lomo Fundido",
+    "slug": "lomo-fundido",
+    "description": "Carne de res con cebolla y chile dulce en rajas fundidos y montados sobre 4 tortillas de maiz, cilantro y cebolla picada. Acompañado de sus salsas y chimol de Donde Ofelia",
+    "variants": [
+      {
+        "name": null,
+        "price": 325
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/e4388eba-d317-40d9-acd3-186c6715dac0.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/lomo-fundido.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Choriqueso Fundido",
+    "slug": "choriqueso-fundido",
+    "description": "Chorizo en trozos con rajas de cebolla, chile dulce, fundido en queso derretido y cilantro. Acompañado de sus salsas y el chimol de la casa.",
+    "variants": [
+      {
+        "name": null,
+        "price": 315
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/fb5117db-e502-4074-b6df-387091eafe11.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/choriqueso-fundido.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Combinado de dos carnes",
+    "slug": "combinado-de-dos-carnes",
+    "description": "Una combinación de dos carnes de tu elección preparadas con cebolla y chile dulce en rajas, montado en cuantro tortillas acompañado de nuestras salsas y chimol de la casa.",
+    "variants": [
+      {
+        "name": null,
+        "price": 325
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Quesabirria",
+    "slug": "quesabirria",
+    "description": "Nuestra deliciosa carne a birria doblada en una tortilla de harina XL con queso derretido, cebolla, cilantro y servida con nuestro consome para darle sabor a cada bocado.",
+    "variants": [
+      {
+        "name": null,
+        "price": 245
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/234c57cc-dc0c-4cd6-8d9b-42b425ddc314.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/quesabirria.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Gringas al Pastor",
+    "slug": "gringas-al-pastor",
+    "description": "Preparada con carne al pastor y mucho queso derretido en una tortilla de harina dorada a la plancha, servida con cebolla, cilantro picado y salsa roja.",
+    "variants": [
+      {
+        "name": null,
+        "price": 105
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/2ddd79a2-a129-4b96-a4d3-7faa058626d8.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/gringas-al-pastor.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Sincronizadas",
+    "slug": "sincronizadas",
+    "description": "Dos tortillas de harina rellenas con queso derretido y la carne de tu preferemcia ligeramente doradas en la plancha, con cebolla, cilantro, salsa y su chimol",
+    "variants": [
+      {
+        "name": "Pollo, Carnita o Cochinita",
+        "price": 125
+      },
+      {
+        "name": "Al Pastor",
+        "price": 147
+      },
+      {
+        "name": "Con Bistec o Chorizo",
+        "price": 157
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/59a76dd1-7ba1-496d-a404-b1244aac9d26.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/sincronizadas.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Enchiladas Suizas",
+    "slug": "enchiladas-suizas",
+    "description": "Orden de tres tortillas de maiz rellenas de pollo deshebrado y quesillo, bañadas en salsa verde, gratinadas al horno; servidas con crema, queso rallado, frijoles y totopos. Nunca falta en la cocina Mexicana.",
+    "variants": [
+      {
+        "name": null,
+        "price": 265
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/652d325d-bc03-4246-8df7-260feb4d2b52.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/enchiladas-suizas.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Enchiladas Poblanas",
+    "slug": "enchiladas-poblanas",
+    "description": "Orden de tres tortillas de maiz rellenas de pollo deshebrado y quesillo. Bañadas en una exótica salsa de Mole, gratinadas al horno; servidas con crema, queso rallado, frijoles y totopos.",
+    "variants": [
+      {
+        "name": null,
+        "price": 265
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/94661b60-3369-4bd8-a04d-de6cd0282633.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/enchiladas-poblanas.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Enchiladas Guerrerenses",
+    "slug": "enchiladas-guerrerenses",
+    "description": "Orden de tres tortillas de maiz dobladas y rellenas con pollo y queso doraditas acompañadas sobre una cama de lechuga, caldo verde, aguacate, queso rallado, crema y el chimol de Donde Ofelia",
+    "variants": [
+      {
+        "name": null,
+        "price": 275
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/9133d909-fd7d-41e9-8298-12c34d0cc522.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/enchiladas-guerrerenses.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Chilaquiles",
+    "slug": "chilaquiles",
+    "description": "Platillo elaborado a base de totopos con pollo y queso ahogados con salsa roja o verde y gratinados al horno, servido con crema, queso rallado, chimol y rajas de aguacate. \"La auténtica lasaña Mexicana\"",
+    "variants": [
+      {
+        "name": "Pequeños",
+        "price": 210
+      },
+      {
+        "name": "Grandes",
+        "price": 260
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/1c7d4f86-d9f1-45f0-92b2-564b4a19b74d.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/chilaquiles.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Nachos Donde Ofelia",
+    "slug": "nachos-donde-ofelia",
+    "description": "Receta tradicional mexicana. Totopos con frijoles fritos carne de tu elección y queso derretido al horno, crema, salsa y chimol. \"Ojo es plato fuerte\" 😉",
+    "variants": [
+      {
+        "name": "Pequeño",
+        "price": 250
+      },
+      {
+        "name": "Grande",
+        "price": 295
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/48f2c6fa-94b1-4e2c-914a-aa5dc8c3dbde.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/nachos-donde-ofelia.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Tostada Estilo Ofelia",
+    "slug": "tostada-estilo-ofelia",
+    "description": "Crujiente tortilla de maiz con una fina capa de frijoles, pollo o carnita de cerdo, lechuga, salsa, queso rallado y crema. ¡Las favoritas de nuestra madre Ofelia!",
+    "variants": [
+      {
+        "name": null,
+        "price": 80
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/0e5edd80-d611-48a6-97c3-3ce206f4f698.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/tostada-estilo-ofelia.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Flautas",
+    "slug": "flautas",
+    "description": "Orden de tres unidades de tacos enrollados con pollo y queso derretid. Doradito y bañados en salsa verde con queso rallado y crema. Acompañadas con frijoles y totopos.",
+    "variants": [
+      {
+        "name": null,
+        "price": 178
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/64fa406d-47d2-4078-9f6c-e195b639d5c8.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/flautas.jpeg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Flautas Poblanas",
+    "slug": "flautas-poblanas",
+    "description": "3 deliciosas flautas con pollo y queso derretido en su interior. Bañadas en salsa de mole poblano. Para chuparse los dedos si señor!",
+    "variants": [
+      {
+        "name": null,
+        "price": 185
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/c11174d6-3aa2-4997-9934-c20fb1919124.jpg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/flautas-poblanas.jpg"
+  },
+  {
+    "category": "De la cocina de Ofelia 🍽",
+    "categorySlug": "de-la-cocina-de-ofelia",
+    "name": "Tortas",
+    "slug": "tortas",
+    "description": "Tortas mexicanas, rellenas de frijoles, la carne de tu elección, acompañada de nuestros vegetales frescos, lechuga, tomate y cebolla caramelizada, agucate, salsa verde y salsa picante.",
+    "variants": [
+      {
+        "name": "Birria",
+        "price": 189
+      },
+      {
+        "name": "Pastor",
+        "price": 185
+      },
+      {
+        "name": "Cochinita",
+        "price": 165
+      },
+      {
+        "name": "Pollo",
+        "price": 165
+      },
+      {
+        "name": "Bistec",
+        "price": 195
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/00b72334-6ca2-47fc-8ca7-f4c49524c4bd.jpeg",
+    "localImage": "../assets/menu/de-la-cocina-de-ofelia/tortas.jpeg"
+  },
+  {
+    "category": "Bebidas 🥛",
+    "categorySlug": "bebidas",
+    "name": "Manzanita Sol",
+    "slug": "manzanita-sol",
+    "description": "600 ML ( Producto importado)",
+    "variants": [
+      {
+        "name": null,
+        "price": 70
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/75b3cc17-9b4a-4128-b087-5450c4f5c857.jpg",
+    "localImage": "../assets/menu/bebidas/manzanita-sol.jpg"
+  },
+  {
+    "category": "Bebidas 🥛",
+    "categorySlug": "bebidas",
+    "name": "Refrescos",
+    "slug": "refrescos",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 45
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/26c94244-c93f-4c76-8bb5-19b9355d5a58.jpg",
+    "localImage": "../assets/menu/bebidas/refrescos.jpg"
+  },
+  {
+    "category": "Bebidas 🥛",
+    "categorySlug": "bebidas",
+    "name": "Frizados",
+    "slug": "frizados",
+    "description": "Bebidas 100% Naturales y granizadas.",
+    "variants": [
+      {
+        "name": null,
+        "price": 65
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/a4718160-39f8-46d4-88c7-b2f6a2a21102.jpg",
+    "localImage": "../assets/menu/bebidas/frizados.jpg"
+  },
+  {
+    "category": "Bebidas 🥛",
+    "categorySlug": "bebidas",
+    "name": "Agua en bote",
+    "slug": "agua-en-bote",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 40
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/e53bf648-bbff-4fb0-8613-99e03172d319.jpg",
+    "localImage": "../assets/menu/bebidas/agua-en-bote.jpg"
+  },
+  {
+    "category": "Bebidas 🥛",
+    "categorySlug": "bebidas",
+    "name": "Te Lipton",
+    "slug": "te-lipton",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 48
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/eb6f60c3-cbb5-48e0-9ad1-cbb28a0529e0.jpg",
+    "localImage": "../assets/menu/bebidas/te-lipton.jpg"
+  },
+  {
+    "category": "Las chevez 🍻",
+    "categorySlug": "las-chevez",
+    "name": "Cervezas Nacionales",
+    "slug": "cervezas-nacionales",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 60
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/53b9e21c-716a-4ae2-af4a-c4e2d9ddfce8.jpg",
+    "localImage": "../assets/menu/las-chevez/cervezas-nacionales.jpg"
+  },
+  {
+    "category": "Las chevez 🍻",
+    "categorySlug": "las-chevez",
+    "name": "Cervezas Importadas",
+    "slug": "cervezas-importadas",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 70
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/ccae18bf-e80b-439b-85fe-0ff43ae7b15a.jpg",
+    "localImage": "../assets/menu/las-chevez/cervezas-importadas.jpg"
+  },
+  {
+    "category": "Las chevez 🍻",
+    "categorySlug": "las-chevez",
+    "name": "Republica",
+    "slug": "republica",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 55
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/c6887744-6208-47d7-9a4c-3079e3635bd8.jpg",
+    "localImage": "../assets/menu/las-chevez/republica.jpg"
+  },
+  {
+    "category": "Las chevez 🍻",
+    "categorySlug": "las-chevez",
+    "name": "Paulaner Weissbier",
+    "slug": "paulaner-weissbier",
+    "description": "De apariencia turbia, se presenta en el vaso con un brillante color dorado aterciopelado, bajo una robusta corona de espuma que verdaderamente merece este nombre.",
+    "variants": [
+      {
+        "name": null,
+        "price": 115
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/34be1d11-8682-4052-89c8-acdb7c9e6b31.jpg",
+    "localImage": "../assets/menu/las-chevez/paulaner-weissbier.jpg"
+  },
+  {
+    "category": "Las chevez 🍻",
+    "categorySlug": "las-chevez",
+    "name": "Michelada",
+    "slug": "michelada",
+    "description": "Convierte tu cerveza en michelada",
+    "variants": [
+      {
+        "name": null,
+        "price": 21
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/547670cb-5412-46f1-aef7-a49c861362e3.jpg",
+    "localImage": "../assets/menu/las-chevez/michelada.jpg"
+  },
+  {
+    "category": "Las chevez 🍻",
+    "categorySlug": "las-chevez",
+    "name": "Chelada",
+    "slug": "chelada",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 17
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/cdcc3cd2-63c3-4f45-a710-3445fc7495c5.jpeg",
+    "localImage": "../assets/menu/las-chevez/chelada.jpeg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Cantaritos",
+    "slug": "cantaritos",
+    "description": "Una combinacion de citricos tropicales acompañado de su tequila. Muy refrescante",
+    "variants": [
+      {
+        "name": null,
+        "price": 135
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/357753d7-325f-4dbe-b4b0-7b5d1d97e399.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/cantaritos.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Margarita (Frozen o en las Rocas)",
+    "slug": "margarita-frozen-o-en-las-rocas",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 115
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/6023cb36-52f8-40cf-a30e-d8dbf6be0022.jpeg",
+    "localImage": "../assets/menu/cocteles-y-tragos/margarita-frozen-o-en-las-rocas.jpeg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Jalapeño Margarita",
+    "slug": "jalapeno-margarita",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 135
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/47fec9e2-bd84-48c2-8967-d8d0f3200b17.jpeg",
+    "localImage": "../assets/menu/cocteles-y-tragos/jalapeno-margarita.jpeg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Coronarita",
+    "slug": "coronarita",
+    "description": "Coctel de margarita en el que se deja caer una Coronita.",
+    "variants": [
+      {
+        "name": null,
+        "price": 159
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/b766486a-cb82-4008-9e3a-2defc83c0de9.jpeg",
+    "localImage": "../assets/menu/cocteles-y-tragos/coronarita.jpeg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Piña Colada",
+    "slug": "pina-colada",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 155
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/73d36f6d-9e9b-4607-bd89-072cbbf880d9.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/pina-colada.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Vampiro",
+    "slug": "vampiro",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 117
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/b31496e1-2154-42f7-855b-edbcb87d3478.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/vampiro.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Paloma Tequilera",
+    "slug": "paloma-tequilera",
+    "description": "Una combinación refrescante de tequila y toronja.",
+    "variants": [
+      {
+        "name": null,
+        "price": 125
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/59c80e0a-0a11-4056-b9cd-e45f80a95b93.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/paloma-tequilera.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Corona Sunrise",
+    "slug": "corona-sunrise",
+    "description": "Una combinacion de tequila, citricos y tu Corona bien helada..",
+    "variants": [
+      {
+        "name": null,
+        "price": 125
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/dbc884a8-4372-4029-adec-7a4d7a2712ad.jpeg",
+    "localImage": "../assets/menu/cocteles-y-tragos/corona-sunrise.jpeg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Ron Flor de Caña 7 Años",
+    "slug": "ron-flor-de-cana-7-anos",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 89
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/35ed2ce3-6c87-4372-9a82-d2403615b088.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/ron-flor-de-cana-7-anos.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Ron Zacapa 23 años",
+    "slug": "ron-zacapa-23-anos",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 120
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/764e8591-d541-41fa-9687-21ea63c6095b.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/ron-zacapa-23-anos.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Ofelia´s Old Fashioned",
+    "slug": "ofelia-s-old-fashioned",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 190
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/4f93a379-9d6e-497f-a170-e06ab9ba8d37.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/ofelia-s-old-fashioned.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Gin Tonic",
+    "slug": "gin-tonic",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 90
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/b343da24-d2b3-402f-9b0e-62768067d441.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/gin-tonic.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Aperol Spritz",
+    "slug": "aperol-spritz",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 195
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/4a57b0c2-7d63-434c-add3-fb67edae5544.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/aperol-spritz.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Gin Frutos Rojos",
+    "slug": "gin-frutos-rojos",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 150
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/1c0df32d-f30c-4b87-ad66-72b70032ba55.jfif",
+    "localImage": "../assets/menu/cocteles-y-tragos/gin-frutos-rojos.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Mojito",
+    "slug": "mojito",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 95
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/d7818871-5e49-441e-8c66-538108ca9e8b.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/mojito.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Mexican Mule",
+    "slug": "mexican-mule",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 155
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/ab911ee9-fd47-408e-8ede-b8a67c150d9b.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/mexican-mule.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Long Island Tea",
+    "slug": "long-island-tea",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 135
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/a3c2a11b-1a2d-4ca1-a335-ed5fa6919579.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/long-island-tea.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Vodka",
+    "slug": "vodka",
+    "description": "Pidelo con Gin o Cranberry o Jugo de Naranja",
+    "variants": [
+      {
+        "name": null,
+        "price": 95
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/c11ad86c-b9c6-4f6c-a508-8760ba23893a.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/vodka.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Jack Daniel´s",
+    "slug": "jack-daniel-s",
+    "description": "En las rocas, agua o soda",
+    "variants": [
+      {
+        "name": null,
+        "price": 130
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/11fe8034-8b0a-4cf8-bbe4-4245cbc4e48a.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/jack-daniel-s.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Buchanans",
+    "slug": "buchanans",
+    "description": "En las rocas, agua o soda",
+    "variants": [
+      {
+        "name": null,
+        "price": 150
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/06a0fc3c-de59-4908-9ec9-6e3fa4eae792.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/buchanans.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Black Label - Johnnie Walker",
+    "slug": "black-label-johnnie-walker",
+    "description": "En las Rocas, Aguia o Soda",
+    "variants": [
+      {
+        "name": null,
+        "price": 130
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/863686da-ff66-45e9-9ec4-460d10c6479b.jfif",
+    "localImage": "../assets/menu/cocteles-y-tragos/black-label-johnnie-walker.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Vino Tinto",
+    "slug": "vino-tinto",
+    "description": "Merlot o Cabernet Sauvignon",
+    "variants": [
+      {
+        "name": null,
+        "price": 85
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/0548d009-133f-4b8e-8fe4-0f63323401af.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/vino-tinto.jpg"
+  },
+  {
+    "category": "Cocteles y Tragos 🥃",
+    "categorySlug": "cocteles-y-tragos",
+    "name": "Jager Bomb",
+    "slug": "jager-bomb",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 135
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/a3c7874d-446e-4f01-a02c-9631b529256b.jpg",
+    "localImage": "../assets/menu/cocteles-y-tragos/jager-bomb.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Gran Malo Spicy Tamarindo",
+    "slug": "gran-malo-spicy-tamarindo",
+    "description": "El único y delicioso elixir de Gran Malo. La expresión deliciosa del sabor tropical del tamarindo enchilado con tequila. Una experiencia distinta que te dejará con una sensación de nostalgia.",
+    "variants": [
+      {
+        "name": "Shot",
+        "price": 120
+      },
+      {
+        "name": "Double Shot",
+        "price": 200
+      },
+      {
+        "name": "Botella 750 ML",
+        "price": 1575
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/d664bfc1-47d2-428d-b62f-6e7ada364c0c.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/gran-malo-spicy-tamarindo.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Quita Penas",
+    "slug": "quita-penas",
+    "description": "Es una delicia al paladar gracias a su textura y sabor incomparable, además de ser altamente apreciada por sus características, manteniendo el espíritu del agave y especias aromáticas que le dan su sello de distinción.",
+    "variants": [
+      {
+        "name": "Sencillo",
+        "price": 118
+      },
+      {
+        "name": "Doble",
+        "price": 198
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/4b64ce12-488b-4420-9de3-ac12d5bdeb01.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/quita-penas.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Don Julio 70 Cristalino",
+    "slug": "don-julio-70-cristalino",
+    "description": "El primer tequila añejado cristalino del mundo, cuenta con un añejamiento en barricas de roble blanco, el cual destaca por sus tonos frutales, así como cítricos con un toque dulce de vainilla y caramelo, ligeramente amaderado.",
+    "variants": [
+      {
+        "name": "Caballito Sencillo",
+        "price": 145
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 265
+      },
+      {
+        "name": "Botella",
+        "price": 2250
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/f99be384-9b42-4246-a3b3-a59d343d4689.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/don-julio-70-cristalino.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Don Julio Reposado",
+    "slug": "don-julio-reposado",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 140
+      },
+      {
+        "name": "Caballito doble",
+        "price": 255
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/61c8a38d-3817-4169-9d03-79ed2fe6a322.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/don-julio-reposado.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Herradura Reposado Tequila",
+    "slug": "herradura-reposado-tequila",
+    "description": "Es El Primer Reposado Del Mundo, Nace En 1974, Su Reposo De 11 Meses En Barricas De Roble Blanco Americano Le Otorga Un Gran Cuerpo, Luminosidad, Transparencia, Brillo Y Un Sabor Único Que Ha Seducido A Conocedores En La Materia De Todo El Mundo.",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 159
+      },
+      {
+        "name": "Caballito doble",
+        "price": 310
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/275658e0-4055-4b1e-b3bb-e3ca7ebb1bd5.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/herradura-reposado-tequila.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Mayorazgo Reposado Tequila",
+    "slug": "mayorazgo-reposado-tequila",
+    "description": "Tequila Reposado 100% Agave. A La Vista Es Limpio Y Brillante, De Color Amarillo Claro Con Destellos Dorados. Su Aroma Presenta Notas De Agave, Vainilla Y Frutos Secos.",
+    "variants": [
+      {
+        "name": "Sencillo",
+        "price": 80
+      },
+      {
+        "name": "Doble",
+        "price": 150
+      },
+      {
+        "name": "Botella 750 ML.",
+        "price": 1000
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/ac9f5610-1fc4-4a60-848b-182d8a22df86.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/mayorazgo-reposado-tequila.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Corralejo",
+    "slug": "corralejo",
+    "description": "Tequila Corralejo Reposado es de sabor suave pero con un carácter fuerte, cuenta con una amplia gama de tonalidades propias de la madera del roble americano donde se reposa mínimo 4 meses.",
+    "variants": [
+      {
+        "name": "Shot",
+        "price": 127
+      },
+      {
+        "name": "Shot Doble",
+        "price": 200
+      },
+      {
+        "name": "Botella 750 ML",
+        "price": 1570
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/9bccc0cd-171e-46f2-99c5-d9f6e06efe6f.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/corralejo.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Jarana",
+    "slug": "jarana",
+    "description": "Tequila 100% Agave Con Sabor Robusto Y Bien Definido.",
+    "variants": [
+      {
+        "name": "Sencillo",
+        "price": 63
+      },
+      {
+        "name": "Dooble",
+        "price": 127
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/f617a865-2856-4593-a641-7a357f5f37c7.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/jarana.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Espolon",
+    "slug": "espolon",
+    "description": "",
+    "variants": [
+      {
+        "name": "Sencillo",
+        "price": 80
+      },
+      {
+        "name": "Doble",
+        "price": 150
+      },
+      {
+        "name": "Botella",
+        "price": 1120
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/4a71c077-52e4-4038-a1d1-1e1e9abc55fd.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/espolon.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "El Patron",
+    "slug": "el-patron",
+    "description": "El primer tequila ultraprémium del mundo, se debe degustar desde el primer sorbo, desde el delicado aroma de las frutas y los cítricos hasta el sabor dulce y suave con un ligero acabado de pimienta",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 149
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 280
+      },
+      {
+        "name": "Botella",
+        "price": 2675
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/c06e25fc-a994-411a-857d-0d143f2f7323.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/el-patron.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Tequila Maestro Dobel",
+    "slug": "tequila-maestro-dobel",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 149
+      },
+      {
+        "name": "Caballito doble",
+        "price": 280
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/326df19e-08aa-4a74-8bde-dbc83976dd4f.png",
+    "localImage": "../assets/menu/tequilas-y-mezcales/tequila-maestro-dobel.png"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "1800 Cristalino",
+    "slug": "1800-cristalino",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 110
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 200
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/6bf4edd2-a2ef-4708-a10c-c31b6f911d6d.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/1800-cristalino.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "1800 Añejo",
+    "slug": "1800-anejo",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 145
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 280
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/4c6d4285-4309-44d2-8358-00779e8062e5.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/1800-anejo.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Jose Cuervo",
+    "slug": "jose-cuervo",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 120
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 200
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/a82b5abc-eed9-4633-a93f-b7da5f2c3209.png",
+    "localImage": "../assets/menu/tequilas-y-mezcales/jose-cuervo.png"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Mezcal Mexicat",
+    "slug": "mezcal-mexicat",
+    "description": "Es un mezcal hecho a base de agave azul cocido en hornos conicos de mamposteria y doblemente destilado en alambiques de cobre por lo que lleva un sabor suave y ligeramente ahumado al paladar.",
+    "variants": [
+      {
+        "name": "Sencillo",
+        "price": 98
+      },
+      {
+        "name": "Doble",
+        "price": 165
+      },
+      {
+        "name": "Botella 750 ML.",
+        "price": 950
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/7994be56-0edc-409a-8b5d-624ae19cf451.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/mezcal-mexicat.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Mezcal 400 Conejos",
+    "slug": "mezcal-400-conejos",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito sencillo",
+        "price": 145
+      },
+      {
+        "name": "Caballito doble",
+        "price": 280
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/01e0b995-63c8-4339-8634-485d5d93d750.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/mezcal-400-conejos.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Mezcal Creyente",
+    "slug": "mezcal-creyente",
+    "description": "Elaborado con agaves de distintas regiones que obtienen lo mejor del añejamiento en barricas de roble americano, filtrado para brindar una suavidad unica con notas frutales, destellos dulces y un toque ahumado",
+    "variants": [
+      {
+        "name": "Caballito Sencillo",
+        "price": 145
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 280
+      },
+      {
+        "name": "Botella 750 ML",
+        "price": 2245
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/9f99d064-1bd0-45ea-8b32-19227e064b19.jfif",
+    "localImage": "../assets/menu/tequilas-y-mezcales/mezcal-creyente.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Mezcal Nuku",
+    "slug": "mezcal-nuku",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito Sencillo",
+        "price": 120
+      },
+      {
+        "name": "Caballito Doble",
+        "price": 210
+      },
+      {
+        "name": "Botella",
+        "price": 1780
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/777129e7-2969-4881-a244-1d63ac0b49db.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/mezcal-nuku.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Tequila Kah",
+    "slug": "tequila-kah",
+    "description": "",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 155
+      },
+      {
+        "name": "Caballito doble",
+        "price": 295
+      },
+      {
+        "name": "Botella",
+        "price": 1740
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/1cc174f5-29f8-4d66-b127-3543c487458c.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/tequila-kah.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Mezcal Amaras Espadin Reposado",
+    "slug": "mezcal-amaras-espadin-reposado",
+    "description": "La clase a tu paladar",
+    "variants": [
+      {
+        "name": "Caballito",
+        "price": 140
+      },
+      {
+        "name": "Caballito doble",
+        "price": 260
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/d1d4f0ec-fdef-4f10-b549-7f9401aa103d.jpeg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/mezcal-amaras-espadin-reposado.jpeg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Tequila El Santo",
+    "slug": "tequila-el-santo",
+    "description": "",
+    "variants": [
+      {
+        "name": "Sencillo",
+        "price": 80
+      },
+      {
+        "name": "Doble",
+        "price": 150
+      },
+      {
+        "name": "Botella",
+        "price": 750
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/f9d33fa3-ff57-4520-abc6-944ab553c34e.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/tequila-el-santo.jpg"
+  },
+  {
+    "category": "Tequilas y Mezcales 😜",
+    "categorySlug": "tequilas-y-mezcales",
+    "name": "Milagro",
+    "slug": "milagro",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 135
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/b7a5ee27-39d6-4c38-9f5e-2323c8d1e25b.jpg",
+    "localImage": "../assets/menu/tequilas-y-mezcales/milagro.jpg"
+  },
+  {
+    "category": "Postres 🍮",
+    "categorySlug": "postres",
+    "name": "Cheesecake NY",
+    "slug": "cheesecake-ny",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 125
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/c7cd7981-14ca-41cf-8167-01ba231e4fb8.jpg",
+    "localImage": "../assets/menu/postres/cheesecake-ny.jpg"
+  },
+  {
+    "category": "Postres 🍮",
+    "categorySlug": "postres",
+    "name": "Pie de Limon",
+    "slug": "pie-de-limon",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 95
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/1184b848-5b05-41ac-96bc-f652615720f1.jpg",
+    "localImage": "../assets/menu/postres/pie-de-limon.jpg"
+  },
+  {
+    "category": "Postres 🍮",
+    "categorySlug": "postres",
+    "name": "Chongos Zamoranos",
+    "slug": "chongos-zamoranos",
+    "description": "El postre tradicional Mexicano. Dulce a base de leche y su toque a canela.",
+    "variants": [
+      {
+        "name": null,
+        "price": 85
+      }
+    ],
+    "sourceImage": "https://assets.olaclick.app/companies/products/images/800/2aff653c-f949-4ad2-b9d4-f0e3dadd4ccd.jpg",
+    "localImage": "../assets/menu/postres/chongos-zamoranos.jpg"
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Orden de tortillas",
+    "slug": "orden-de-tortillas",
+    "description": "4 tortillas de maiz",
+    "variants": [
+      {
+        "name": null,
+        "price": 12
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Frijolitos fritos",
+    "slug": "frijolitos-fritos",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 20
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Aguacate",
+    "slug": "aguacate",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 29
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Totopos",
+    "slug": "totopos",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 18
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Orden de Salsas",
+    "slug": "orden-de-salsas",
+    "description": "Verde, Roja, Chipotle y Chimol",
+    "variants": [
+      {
+        "name": null,
+        "price": 27
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Chicharron",
+    "slug": "chicharron",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 38
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Quesadillas de maiz con quesillo",
+    "slug": "quesadillas-de-maiz-con-quesillo",
+    "description": "2 Quesadillas de maiz con quesillo derretido",
+    "variants": [
+      {
+        "name": null,
+        "price": 46
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Bandeja para llevar",
+    "slug": "bandeja-para-llevar",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 10
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "con soda",
+    "slug": "con-soda",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 13
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Extra Taco Birria",
+    "slug": "extra-taco-birria",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 81
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Descorche",
+    "slug": "descorche",
+    "description": "Incluye: Hielo, Quina, Agua o Soda",
+    "variants": [
+      {
+        "name": null,
+        "price": 160
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  },
+  {
+    "category": "Extras",
+    "categorySlug": "extras",
+    "name": "Extra Arroz Mexicano",
+    "slug": "extra-arroz-mexicano",
+    "description": "",
+    "variants": [
+      {
+        "name": null,
+        "price": 47
+      }
+    ],
+    "sourceImage": null,
+    "localImage": null
+  }
+]

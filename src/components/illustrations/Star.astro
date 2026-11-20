@@ -1,0 +1,8 @@
+---
+// Destello de cuatro puntas.
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <path d="M50 4 C53 38 62 47 96 50 C62 53 53 62 50 96 C47 62 38 53 4 50 C38 47 47 38 50 4 Z" pathLength="1" />
+</svg>

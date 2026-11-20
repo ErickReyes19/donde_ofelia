@@ -1,0 +1,55 @@
+---
+// Sol con rostro: ilustración original de línea (tiza), inspirada en el vocabulario del local.
+// Cada trazo lleva pathLength="1" para animar su dibujo en la Fase 4.
+interface Props { class?: string; glow?: boolean; [attr: string]: unknown }
+const { class: className = '', glow = true, ...attrs } = Astro.props;
+
+const cx = 200, cy = 200, N = 16;
+const f = (n: number) => n.toFixed(1);
+const rays: string[] = [];
+for (let i = 0; i < N; i++) {
+  const a = (i / N) * Math.PI * 2 - Math.PI / 2;
+  if (i % 2 === 0) {
+    // rayo ondulado, como llama
+    const r0 = 98, r1 = 186, steps = 32, pts: string[] = [];
+    for (let s = 0; s <= steps; s++) {
+      const t = s / steps;
+      const r = r0 + (r1 - r0) * t;
+      const off = 9 * (1 - t * 0.6) * Math.sin(t * Math.PI * 3);
+      pts.push(`${f(cx + Math.cos(a) * r - Math.sin(a) * off)} ${f(cy + Math.sin(a) * r + Math.cos(a) * off)}`);
+    }
+    rays.push(`M${pts.join(' L')}`);
+  } else {
+    // rayo en punta
+    const r0 = 98, r1 = 152, w = 0.075;
+    const p = (ang: number, r: number) => `${f(cx + Math.cos(ang) * r)} ${f(cy + Math.sin(ang) * r)}`;
+    rays.push(`M${p(a - w, r0)} L${p(a, r1)} L${p(a + w, r0)}`);
+  }
+}
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+  {glow && <circle class="fill" cx={cx} cy={cy} r="84" style="fill: var(--color-naranja); opacity: .14" />}
+  <g data-draw="rays">
+    {rays.map((d) => <path d={d} pathLength="1" />)}
+  </g>
+  <g data-draw="face">
+    <circle cx={cx} cy={cy} r="86" pathLength="1" />
+    <circle cx={cx} cy={cy} r="76" pathLength="1" />
+    <!-- cejas -->
+    <path d="M160 176 Q174 165 189 174" pathLength="1" />
+    <path d="M211 174 Q226 165 240 176" pathLength="1" />
+    <!-- ojos cerrados y pestañas -->
+    <path d="M162 193 Q175 204 188 193" pathLength="1" />
+    <path d="M212 193 Q225 204 238 193" pathLength="1" />
+    <path d="M166 200 l-3 6 M175 203 l0 7 M184 200 l3 6" pathLength="1" />
+    <path d="M216 200 l-3 6 M225 203 l0 7 M234 200 l3 6" pathLength="1" />
+    <!-- nariz -->
+    <path d="M200 186 Q197 208 191 217 Q198 223 207 218" pathLength="1" />
+    <!-- boca -->
+    <path d="M183 236 Q200 247 217 236" pathLength="1" />
+    <path d="M188 236 Q200 231 212 236" pathLength="1" />
+    <!-- mejillas en espiral -->
+    <path d="M166 224 m-7 0 a7 7 0 1 0 7 -7 a4 4 0 1 0 4 4" pathLength="1" />
+    <path d="M234 224 m-7 0 a7 7 0 1 0 7 -7 a4 4 0 1 0 4 4" pathLength="1" />
+  </g>
+</svg>

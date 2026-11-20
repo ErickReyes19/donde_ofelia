@@ -1,0 +1,50 @@
+---
+// Papel picado: banderines calados (dibujo original) colgando de un cordel.
+// Cada bandera es un path con fill-rule evenodd: el contorno y sus calados.
+interface Props { class?: string; count?: number }
+const { class: className = '', count = 14 } = Astro.props;
+
+const W = 64, gap = 14, top = 14, H = 72;
+const colors = ['var(--color-chile)', 'var(--color-oro)', 'var(--color-nopal)', 'var(--color-naranja)', 'var(--color-turquesa)', 'var(--color-tiza)'];
+const total = count * (W + gap);
+const f = (n: number) => n.toFixed(1);
+
+function flag(x: number, sag: number) {
+  const y = top + sag;
+  // contorno con borde inferior en zigzag
+  let d = `M${f(x)} ${f(y)} H${f(x + W)} V${f(y + H)}`;
+  const teeth = 6;
+  for (let i = teeth; i > 0; i--) {
+    const tx = x + (W / teeth) * (i - 0.5);
+    d += ` L${f(tx)} ${f(y + H + 7)} L${f(x + (W / teeth) * (i - 1))} ${f(y + H)}`;
+  }
+  d += ' Z';
+  const cx = x + W / 2, cy = y + H / 2 - 2;
+  // calado: rombo central
+  d += ` M${f(cx)} ${f(cy - 14)} L${f(cx + 11)} ${f(cy)} L${f(cx)} ${f(cy + 14)} L${f(cx - 11)} ${f(cy)} Z`;
+  // calado: cuatro puntos en las esquinas
+  for (const [dx, dy] of [[-20, -22], [20, -22], [-20, 22], [20, 22]]) {
+    const px = cx + dx, py = cy + dy, r = 4;
+    d += ` M${f(px - r)} ${f(py)} a${r} ${r} 0 1 0 ${r * 2} 0 a${r} ${r} 0 1 0 ${-r * 2} 0`;
+  }
+  // calado: pétalos arriba y abajo
+  d += ` M${f(cx - 4)} ${f(cy - 26)} q4 -7 8 0 q-4 5 -8 0 Z M${f(cx - 4)} ${f(cy + 26)} q4 7 8 0 q-4 -5 -8 0 Z`;
+  return d;
+}
+
+const flags = Array.from({ length: count }, (_, i) => {
+  const x = gap / 2 + i * (W + gap);
+  const t = (x + W / 2) / total;
+  const sag = Math.sin(t * Math.PI) * 10; // el cordel cuelga un poco en el centro
+  return { d: flag(x, sag), color: colors[i % colors.length], cx: x + W / 2, sag };
+});
+const rope = `M0 ${top} Q${f(total / 2)} ${f(top + 20)} ${f(total)} ${top}`;
+---
+<!-- data-wind: los banderines caen al entrar y se mecen con la velocidad del scroll (motion.ts).
+     data-ox / data-oy: punto donde cada bandera cuelga del cordel (su eje de giro). -->
+<svg class={className} viewBox={`0 0 ${f(total)} ${top + H + 24}`} preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false" data-wind>
+  <path d={rope} fill="none" stroke="var(--color-tiza)" stroke-opacity=".5" stroke-width="1.5" vector-effect="non-scaling-stroke" />
+  {flags.map((fl, i) => (
+    <path d={fl.d} fill={fl.color} fill-rule="evenodd" data-flag={i} data-ox={f(fl.cx)} data-oy={f(top + fl.sag)} style="opacity: .92" />
+  ))}
+</svg>

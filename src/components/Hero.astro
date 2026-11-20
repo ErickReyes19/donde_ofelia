@@ -1,0 +1,131 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-donde-ofelia.png';
+import heroPhoto from '../assets/local/gm-05.jpg';
+import Sun from './illustrations/Sun.astro';
+import Saguaro from './illustrations/Saguaro.astro';
+import Nopal from './illustrations/Nopal.astro';
+import Star from './illustrations/Star.astro';
+import Moon from './illustrations/Moon.astro';
+import OpenStatus from './OpenStatus.astro';
+import { restaurant as r, hoursLabel } from '../data/restaurant';
+
+// Capas del hero (Fase 4):
+//   data-enter          → entra una sola vez en la secuencia de carga (src/scripts/motion.ts)
+//   data-speed          → parallax con el scroll (fracción del alto de pantalla; + sube más rápido, − más lento)
+//   data-mouse-depth    → parallax con el puntero (solo desktop con mouse)
+// Cada capa decorativa es una envoltura: el scroll mueve la de afuera y el puntero la de adentro,
+// así los dos transforms no se pisan.
+---
+<section id="inicio" class="hero relative" aria-labelledby="hero-title" data-parallax-section="hero" data-mouse-parallax>
+  <div class="wrap hero-grid">
+    <div class="hero-copy" data-hero-copy>
+      <div class="hero-moon" data-speed="-0.06" aria-hidden="true">
+        <div data-mouse-depth="0.02"><Moon class="w-full text-oro" data-enter="draw" /></div>
+      </div>
+      <div data-enter="fade">
+        <Image
+          src={logo}
+          alt={`${r.name}, ${r.slogan}`}
+          widths={[280, 420, 560]}
+          sizes="(min-width: 1024px) 220px, 200px"
+          class="hero-logo"
+          loading="eager"
+        />
+      </div>
+      <h1 id="hero-title" class="display h1 mt-7" data-enter="words">Comida mexicana en Barrio Los Andes</h1>
+      <p class="lead mt-5 text-tiza/90" data-enter="up">
+        Tacos, pozole estilo Guerrero y cantaritos desde {r.since}. Todos los días de {hoursLabel}
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4" data-hero-actions data-enter="up">
+        <span class="inline-flex" data-magnetic="0.22"><a class="btn btn-primary" href="#reservar">Reservar mesa</a></span>
+        <a class="link text-[1.0625rem] font-medium" href="#menu">Ver el menú</a>
+      </div>
+      <div class="mt-8 space-y-1.5 text-[1rem]" data-enter="up">
+        <OpenStatus />
+        <p class="muted">
+          <a class="link-draw" href={r.mapsUrl} target="_blank" rel="noopener">{r.address.street}, {r.address.district}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hv hv-sun" data-speed="-0.14" aria-hidden="true">
+        <div data-mouse-depth="0.018"><Sun class="w-full text-tiza" data-enter="sun" /></div>
+      </div>
+      <div class="hv-photo" data-speed="0.04">
+        <figure class="ph hero-photo" style="--pos: 64% 50%" data-enter="photo">
+          <Image
+            src={heroPhoto}
+            alt="Mostrador de Donde Ofelia con ilustraciones de sol y cactus en tiza y el logo iluminado sobre un muro verde"
+            widths={[480, 720, 960, 1200]}
+            sizes="(min-width: 1024px) 40vw, 92vw"
+            priority
+          />
+        </figure>
+      </div>
+      <div class="hv hv-saguaro" data-speed="0.2" aria-hidden="true">
+        <div data-mouse-depth="0.04"><Saguaro class="w-full text-tiza" data-enter="grow" /></div>
+      </div>
+      <div class="hv hv-nopal" data-speed="0.3" aria-hidden="true">
+        <div data-mouse-depth="0.055"><Nopal class="w-full text-tiza" data-enter="grow" /></div>
+      </div>
+      <div class="hv hv-star-a" data-speed="0.42" aria-hidden="true">
+        <div data-mouse-depth="0.07"><Star class="w-full text-oro" data-enter="pop" /></div>
+      </div>
+      <div class="hv hv-star-b" data-speed="0.32" aria-hidden="true">
+        <div data-mouse-depth="0.06"><Star class="w-full text-oro" data-enter="pop" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100svh;
+    padding-top: calc(var(--header-h) + clamp(16px, 3vh, 40px));
+    padding-bottom: clamp(32px, 5vh, 64px);
+    display: flex;
+    align-items: center;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 56px;
+    align-items: center;
+  }
+  .hero-copy { grid-column: 1 / -1; position: relative; }
+  /* El sol asoma por encima de la foto: la cara queda a la vista y la foto tapa los rayos de abajo */
+  .hero-visual { grid-column: 1 / -1; position: relative; padding-top: 47%; }
+
+  .hero-logo { width: 200px; height: auto; }
+  .hero-moon { position: absolute; width: 60px; right: 4%; top: 0; opacity: .85; }
+
+  .hv { position: absolute; z-index: 2; }
+  .hv-sun { z-index: 0; left: 13%; top: 0; width: 74%; }
+  .hv-photo { position: relative; z-index: 1; }
+  .hero-photo { aspect-ratio: 1; }
+  .hv-saguaro { width: 19%; left: -7%; bottom: -2%; }
+  .hv-nopal { width: 23%; right: -6%; bottom: -4%; }
+  .hv-star-a { width: 30px; left: 4%; top: 18%; }
+  .hv-star-b { width: 20px; right: 4%; top: 8%; }
+
+  @media (min-width: 640px) {
+    .hero-visual { max-width: 500px; margin-inline: auto; width: 100%; }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-copy { grid-column: 1 / span 7; }
+    .hero-visual { grid-column: 8 / span 5; max-width: none; }
+    .hero-logo { width: 220px; }
+    .hero-moon { width: 72px; right: 14%; top: 8px; }
+  }
+
+  /* En pantallas bajas, la foto se aplana para que todo quepa en la primera pantalla */
+  @media (min-width: 1024px) and (max-height: 820px) {
+    .hero-photo { aspect-ratio: 6 / 5; }
+    .hero-logo { width: 170px; }
+    .hero h1 { font-size: clamp(3rem, 9vh, 5.5rem); margin-top: 1.25rem; }
+  }
+</style>

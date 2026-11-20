@@ -1,0 +1,31 @@
+---
+// Nube de espiral (ilustración original de línea).
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+
+const f = (n: number) => n.toFixed(1);
+function spiral(cx: number, cy: number, rMax: number, turns: number) {
+  const steps = Math.round(turns * 40);
+  const pts: string[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    const a = t * turns * Math.PI * 2;
+    const r = rMax * t;
+    pts.push(`${f(cx + Math.cos(a) * r)} ${f(cy + Math.sin(a) * r)}`);
+  }
+  return `M${pts.join(' L')}`;
+}
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 260 120" aria-hidden="true" focusable="false">
+  <path
+    class="occlude"
+    d="M32 98 Q12 98 12 80 Q12 62 34 60 Q36 30 70 28 Q90 8 120 22 Q142 6 168 24 Q198 20 206 48 Q234 50 238 74 Q240 98 214 98 Z"
+    pathLength="1"
+  />
+  <path d={spiral(76, 64, 22, 2.25)} pathLength="1" />
+  <path d={spiral(178, 62, 15, 1.75)} pathLength="1" />
+</svg>
+
+<style>
+  .occlude { fill: var(--ill-bg, var(--color-pizarra)); }
+</style>

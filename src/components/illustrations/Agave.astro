@@ -1,0 +1,36 @@
+---
+// Agave (ilustración original de línea). Las hojas se dibujan del centro hacia afuera,
+// tapando las de atrás con --ill-bg.
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+
+const bx = 130, by = 176;
+const f = (n: number) => n.toFixed(1);
+const angles = [0, -14, 14, -30, 30, -48, 48, -66, 66];
+const leaves = angles.map((deg) => {
+  const t = (deg * Math.PI) / 180;
+  const L = 150 - Math.abs(deg) * 1.05;
+  const w = 17 * (L / 150) + 4;
+  const tip = [bx + Math.sin(t) * L, by - Math.cos(t) * L];
+  const mid = [bx + Math.sin(t) * L * 0.42, by - Math.cos(t) * L * 0.42];
+  const n = [Math.cos(t), Math.sin(t)];
+  const c1 = [mid[0] - n[0] * w, mid[1] - n[1] * w];
+  const c2 = [mid[0] + n[0] * w, mid[1] + n[1] * w];
+  return {
+    outline: `M${f(bx - n[0] * 5)} ${f(by - n[1] * 5)} Q${f(c1[0])} ${f(c1[1])} ${f(tip[0])} ${f(tip[1])} Q${f(c2[0])} ${f(c2[1])} ${f(bx + n[0] * 5)} ${f(by + n[1] * 5)}`,
+    rib: `M${f(bx)} ${f(by)} L${f(bx + Math.sin(t) * L * 0.8)} ${f(by - Math.cos(t) * L * 0.8)}`,
+  };
+});
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 260 180" aria-hidden="true" focusable="false">
+  {leaves.map((l) => (
+    <g>
+      <path class="occlude" d={l.outline} pathLength="1" />
+      <path d={l.rib} pathLength="1" style="opacity:.45" />
+    </g>
+  ))}
+</svg>
+
+<style>
+  .occlude { fill: var(--ill-bg, var(--color-pizarra)); }
+</style>

@@ -1,0 +1,13 @@
+---
+// Luna creciente con rostro (ilustración original de línea).
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+  <path d="M140 30 A80 80 0 1 0 140 170 A75 75 0 0 1 140 30 Z" pathLength="1" />
+  <path d="M52 86 Q60 93 68 86" pathLength="1" />
+  <path d="M55 92 l-2 5 M60 94 l0 5 M65 92 l2 5" pathLength="1" />
+  <path d="M74 96 Q70 108 66 112 Q71 115 76 112" pathLength="1" />
+  <path d="M56 126 Q64 132 72 126" pathLength="1" />
+  <path d="M46 108 m-4 0 a4 4 0 1 0 4 -4" pathLength="1" />
+</svg>

@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-donde-ofelia.png';
+import Hills from './illustrations/Hills.astro';
+import { restaurant as r, hoursLabel } from '../data/restaurant';
+const year = new Date().getFullYear();
+---
+<footer class="footer" aria-labelledby="footer-title" data-parallax-trigger>
+  <Hills class="footer-hills text-tiza" data-speed="-0.08" />
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <h2 id="footer-title" class="sr-only">{r.fullName}</h2>
+      <Image src={logo} alt={`${r.name}, ${r.slogan}`} widths={[200, 400]} sizes="200px" class="h-auto w-[180px]" />
+      <p class="muted mt-6 max-w-[18rem] text-[1rem]">Cocina mexicana de familia en San Pedro Sula desde {r.since}.</p>
+    </div>
+
+    <div>
+      <h3 class="foot-label">Visítanos</h3>
+      <p><a class="link-draw" href={r.mapsUrl} target="_blank" rel="noopener">{r.address.street}, {r.address.district}</a></p>
+      <p class="muted">{r.address.city}</p>
+      <p class="mt-3">Todos los días, de {hoursLabel}</p>
+    </div>
+
+    <div>
+      <h3 class="foot-label">Contacto</h3>
+      <p><a class="link-draw" href={`tel:${r.phones.main.e164}`}>+504 {r.phones.main.display}</a></p>
+      <p><a class="link-draw" href={`https://wa.me/${r.phones.main.wa}`} target="_blank" rel="noopener">Escribir por WhatsApp</a></p>
+      <p><a class="link-draw" href={r.orderUrl} target="_blank" rel="noopener">Pedir en línea</a></p>
+    </div>
+
+    <div>
+      <h3 class="foot-label">Síguenos</h3>
+      <ul class="space-y-1" role="list">
+        <li><a class="link-draw" href={r.social.instagram.url} target="_blank" rel="noopener">Instagram</a></li>
+        <li><a class="link-draw" href={r.social.facebook.url} target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="link-draw" href={r.social.tiktok.url} target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-legal muted">
+    <p>© {year} {r.fullName}, San Pedro Sula.</p>
+    <p>Fotos: Donde Ofelia y su ficha de Google Maps. Ilustraciones originales.</p>
+  </div>
+</footer>
+
+<style>
+  .footer { position: relative; padding-top: clamp(120px, 14vw, 200px); padding-bottom: 40px; border-top: 1px solid color-mix(in srgb, var(--color-tiza) 10%, transparent); overflow: hidden; }
+  .footer-hills { position: absolute; top: 0; left: 0; width: 100%; height: clamp(80px, 10vw, 140px); opacity: .25; }
+  .footer-grid { display: grid; gap: 40px 24px; grid-template-columns: repeat(1, minmax(0, 1fr)); font-size: 1.0625rem; line-height: 1.7; }
+  .foot-label { font-size: 0.875rem; font-weight: 600; color: var(--color-oro); margin-bottom: 10px; }
+  .footer-legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px; margin-top: 80px; padding-top: 24px; border-top: 1px solid color-mix(in srgb, var(--color-tiza) 10%, transparent); font-size: 0.875rem; }
+
+  @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) {
+    .footer-grid { grid-template-columns: 4fr 3fr 3fr 2fr; }
+  }
+  /* Espacio para la barra de acciones en móvil */
+  @media (max-width: 1023px) { .footer { padding-bottom: 120px; } }
+</style>

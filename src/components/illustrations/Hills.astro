@@ -1,0 +1,39 @@
+---
+// Cerros con rayas, como los de la pared turquesa (dibujo original).
+// Cada cerro recorta sus propias rayas; los de adelante tapan a los de atrás con --ill-bg.
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+
+type Hill = { id: string; top: string; x0: number; x1: number; peak: number };
+const hills: Hill[] = [
+  { id: 'h1', top: 'M-40 262 C 140 120 330 104 560 262', x0: -40, x1: 560, peak: 140 },
+  { id: 'h3', top: 'M860 262 C 980 150 1110 136 1260 238', x0: 860, x1: 1260, peak: 160 },
+  { id: 'h2', top: 'M330 262 C 560 64 860 54 1120 262', x0: 330, x1: 1120, peak: 98 },
+];
+const uid = Math.random().toString(36).slice(2, 8);
+const stripeGap = 16;
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 1200 262" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+  <defs>
+    {hills.map((h) => (
+      <clipPath id={`${h.id}-${uid}`}>
+        <path d={`${h.top} Z`} />
+      </clipPath>
+    ))}
+  </defs>
+  {hills.map((h) => (
+    <g>
+      <path class="occlude" d={`${h.top} Z`} style="stroke:none" />
+      <g clip-path={`url(#${h.id}-${uid})`} style="opacity:.6">
+        {Array.from({ length: Math.ceil((262 - h.peak) / stripeGap) }, (_, i) => (
+          <path d={h.top.replace(/C ([\d.-]+) ([\d.-]+) ([\d.-]+) ([\d.-]+)/, (_m, a, b, c, d) => `C ${a} ${+b + (i + 1) * stripeGap} ${c} ${+d + (i + 1) * stripeGap}`)} pathLength="1" />
+        ))}
+      </g>
+      <path d={h.top} pathLength="1" />
+    </g>
+  ))}
+</svg>
+
+<style>
+  .occlude { fill: var(--ill-bg, var(--color-pizarra)); }
+</style>

@@ -1,0 +1,35 @@
+---
+// Barra de acciones en móvil: aparece cuando el botón del hero ya salió de pantalla
+// y se esconde cuando la sección de reserva está a la vista (para no repetir la acción).
+import { restaurant as r } from '../data/restaurant';
+---
+<nav class="actionbar" aria-label="Acciones rápidas" data-actionbar>
+  <a class="btn btn-primary flex-1" href="#reservar">Reservar mesa</a>
+  <a class="btn btn-ghost flex-1 bg-pizarra" href={r.directionsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+</nav>
+
+<style>
+  .actionbar {
+    position: fixed; z-index: 40; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom));
+    display: flex; gap: 8px; padding: 8px;
+    background: color-mix(in srgb, var(--color-pizarra) 92%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-tiza) 12%, transparent);
+    border-radius: 999px;
+    transform: translateY(calc(100% + 24px));
+    transition: transform 320ms var(--ease-out-quint);
+  }
+  .actionbar[data-visible] { transform: translateY(0); }
+  @media (min-width: 1024px) { .actionbar { display: none; } }
+</style>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-actionbar]');
+  const heroActions = document.querySelector('[data-hero-actions]');
+  const reserve = document.getElementById('reservar');
+  if (bar && heroActions) {
+    let heroVisible = true, reserveVisible = false;
+    const update = () => bar.toggleAttribute('data-visible', !heroVisible && !reserveVisible);
+    new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; update(); }).observe(heroActions);
+    if (reserve) new IntersectionObserver(([e]) => { reserveVisible = e.isIntersecting; update(); }, { threshold: 0.25 }).observe(reserve);
+  }
+</script>

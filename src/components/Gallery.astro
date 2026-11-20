@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import muralTurquesa from '../assets/local/gm-01.jpg';
+import loteriaBarra from '../assets/local/gm-02.jpg';
+import flautasMole from '../assets/local/gm-04.jpg';
+import jardin from '../assets/local/gm-06.jpg';
+import loteria from '../assets/local/gm-07.jpg';
+import { restaurant as r } from '../data/restaurant';
+
+// Fotos del local tomadas de su ficha de Google Maps (borrador: reemplazar por fotos del cliente).
+const photos = [
+  { src: muralTurquesa, area: 'a', amp: 6, alt: 'Salón con la pared turquesa ilustrada con cactus dorados, papel picado y faroles de colores', pos: '50% 50%' },
+  { src: loteriaBarra, area: 'b', amp: 9, alt: 'Estantería iluminada con cartas de lotería y botellas de tequila junto al logo en el muro verde', pos: '50% 40%' },
+  { src: flautasMole, area: 'c', amp: 8, alt: 'Flautas bañadas en mole con crema y queso', pos: '50% 50%' },
+  { src: jardin, area: 'd', amp: 5, alt: 'Escenario con música en vivo bajo papel picado y luces de colores', pos: '50% 45%' },
+  { src: loteria, area: 'e', amp: 9, alt: 'Cartas de lotería y botellas en la estantería retroiluminada', pos: '50% 35%' },
+];
+---
+<section id="galeria" class="section" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="head-row">
+      <h2 id="gallery-title" class="display h2" data-reveal="words">La casa de noche</h2>
+      <p class="muted max-w-[26rem] text-[1rem]">
+        Murales, papel picado y faroles en cada rincón.
+        <a class="link ml-1 text-tiza" href={r.social.instagram.url} target="_blank" rel="noopener">Más fotos en Instagram</a>
+      </p>
+    </div>
+
+    <div class="mosaic mt-14">
+      {photos.map((p) => (
+        <figure class={`ph ph-zoom tile tile-${p.area}`} style={`--pos: ${p.pos}`}>
+          <!-- Cada foto se desliza en su marco con su propia amplitud: profundidad sin mover el mosaico -->
+          <div class="ph-pan" data-parallax-img={p.amp}>
+            <Image src={p.src} alt={p.alt} widths={[400, 640, 900, 1200]} sizes="(min-width: 1024px) 50vw, 100vw" />
+          </div>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .head-row { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 48px; }
+
+  .mosaic {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 44vw;
+    gap: 12px;
+  }
+  .tile-a { grid-column: 1 / -1; }
+
+  @media (min-width: 1024px) {
+    .mosaic {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-auto-rows: clamp(150px, 13vw, 190px);
+      grid-template-areas:
+        'a a a a a a a b b b b b'
+        'a a a a a a a b b b b b'
+        'a a a a a a a b b b b b'
+        'c c c c d d d d e e e e'
+        'c c c c d d d d e e e e'
+        'c c c c d d d d e e e e';
+      gap: 16px;
+    }
+    .tile-a { grid-area: a; } .tile-b { grid-area: b; } .tile-c { grid-area: c; }
+    .tile-d { grid-area: d; } .tile-e { grid-area: e; }
+  }
+</style>

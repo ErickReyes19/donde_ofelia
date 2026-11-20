@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+import promo from '../assets/local/gm-03.jpg';
+import Hills from './illustrations/Hills.astro';
+import Saguaro from './illustrations/Saguaro.astro';
+import Cloud from './illustrations/Cloud.astro';
+import Agave from './illustrations/Agave.astro';
+import { restaurant as r } from '../data/restaurant';
+---
+<!-- La única franja de color de la página: homenaje a la pared turquesa del local -->
+<section id="nuestra-casa" class="story section" aria-labelledby="story-title" data-parallax-trigger>
+  <Cloud class="story-cloud text-oro" data-speed="-0.12" />
+  <div class="wrap story-grid">
+    <div class="story-copy">
+      <h2 id="story-title" class="display h2" data-reveal="words">Cocina de familia desde {r.since}</h2>
+      <p class="mt-8 text-[1.1875rem] leading-[1.65]">
+        Aquí se sirve la cocina de nuestra madre Ofelia: el pozole estilo Guerrero, que sigue siendo la
+        especialidad de la casa, las tostadas que eran sus favoritas y tortillas de maíz bien calientitas en
+        cada mesa.
+      </p>
+      <p class="mt-5 text-[1.1875rem] leading-[1.65]">
+        En Barrio Los Andes la casa se llena de noche: murales de cactus y soles, papel picado, cantaritos en
+        jarro de barro y música.
+      </p>
+      <p class="story-values display mt-10" data-reveal="words">Sabor, atención y ambiente.</p>
+    </div>
+    <figure class="ph story-photo" data-reveal="clip">
+      <div class="ph-pan" data-parallax-img="7">
+        <Image
+          src={promo}
+          alt="Tacos al pastor, pozole y chilaquiles servidos sobre un sarape de Donde Ofelia"
+          widths={[480, 720, 960, 1280]}
+          sizes="(min-width: 1024px) 46vw, 92vw"
+        />
+      </div>
+    </figure>
+  </div>
+  <div class="story-land" aria-hidden="true">
+    <Hills class="story-hills text-oro" />
+    <Saguaro class="story-saguaro story-saguaro--a text-oro" data-speed="0.1" />
+    <Saguaro class="story-saguaro story-saguaro--b text-oro" data-speed="0.05" />
+    <Agave class="story-agave text-oro" data-speed="0.14" />
+  </div>
+</section>
+
+<style>
+  .story {
+    --ill-bg: var(--color-turquesa);
+    background: var(--color-turquesa);
+    color: #fff;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .story-copy { grid-column: 1 / -1; max-width: 36rem; }
+  .story-photo { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .story-values { font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem); line-height: 1.05; color: var(--color-oro); }
+
+  .story-cloud { position: absolute; width: clamp(140px, 18vw, 240px); right: 4%; top: 48px; opacity: .9; }
+
+  .story-land { position: relative; height: clamp(150px, 20vw, 260px); margin-top: clamp(40px, 6vw, 80px); }
+  .story-hills { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .story-saguaro { position: absolute; bottom: 0; }
+  .story-saguaro--a { width: clamp(56px, 7vw, 96px); left: 18%; bottom: 18%; }
+  .story-saguaro--b { width: clamp(40px, 5vw, 70px); left: 62%; bottom: 40%; }
+  .story-agave { position: absolute; width: clamp(110px, 14vw, 190px); right: 10%; bottom: -2px; }
+
+  @media (min-width: 1024px) {
+    .story-copy { grid-column: 1 / span 5; }
+    .story-photo { grid-column: 7 / span 6; }
+  }
+</style>

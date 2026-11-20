@@ -1,0 +1,17 @@
+---
+// Saguaro (ilustración original de línea). El relleno usa --ill-bg para tapar lo que queda detrás.
+interface Props { class?: string; [attr: string]: unknown }
+const { class: className = '', ...attrs } = Astro.props;
+---
+<svg class={`ill ${className}`} {...attrs} viewBox="0 0 160 300" aria-hidden="true" focusable="false">
+  <path class="occlude" d="M62 196 H44 Q30 196 30 182 V126 Q30 114 40 114 Q50 114 50 126 V176 H62 Z" pathLength="1" />
+  <path class="occlude" d="M98 158 H116 Q130 158 130 144 V96 Q130 84 120 84 Q110 84 110 96 V138 H98 Z" pathLength="1" />
+  <path class="occlude" d="M62 300 V70 Q62 46 80 46 Q98 46 98 70 V300" pathLength="1" />
+  <path d="M80 62 V296 M71 70 V296 M89 70 V296" pathLength="1" style="opacity:.55" />
+  <path d="M40 124 V184 M120 94 V148" pathLength="1" style="opacity:.55" />
+  <path d="M74 46 Q80 34 86 46" pathLength="1" />
+</svg>
+
+<style>
+  .occlude { fill: var(--ill-bg, var(--color-pizarra)); }
+</style>

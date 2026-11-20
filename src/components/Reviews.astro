@@ -1,0 +1,87 @@
+---
+import { restaurant as r, reviews } from '../data/restaurant';
+import Star from './illustrations/Star.astro';
+
+const { value, count, distribution } = r.rating;
+const total = Object.values(distribution).reduce((a, b) => a + b, 0);
+const rows = ([5, 4, 3, 2, 1] as const).map((s) => ({ s, n: distribution[s], pct: Math.round((distribution[s] / total) * 100) }));
+const ratingText = value.toLocaleString('es-HN', { minimumFractionDigits: 1 });
+---
+<section id="resenas" class="section" aria-labelledby="reviews-title">
+  <div class="wrap reviews-grid">
+    <div class="reviews-score">
+      <h2 id="reviews-title" class="display h2" data-reveal="words">Lo que dicen en Google</h2>
+      <div class="mt-10 flex items-end gap-5">
+        <p class="score display">
+          <span aria-hidden="true">{ratingText}</span>
+          <span class="sr-only">Calificación de {ratingText} de 5 en Google</span>
+        </p>
+        <div class="pb-3">
+          <div class="flex gap-1 text-oro" aria-hidden="true">
+            {[1, 2, 3, 4, 5].map((i) => <span class={`starfill ${i <= Math.floor(value) ? '' : 'starfill--part'}`} style={i > Math.floor(value) ? `--part:${Math.round((value % 1) * 100)}%` : ''}>★</span>)}
+          </div>
+          <p class="muted mt-1 text-[1rem]">{count} reseñas en Google</p>
+        </div>
+      </div>
+
+      <dl class="bars mt-8" aria-label="Reparto de calificaciones" data-bars>
+        {rows.map((row) => (
+          <div class="bar-row">
+            <dt>{row.s} ★</dt>
+            <dd>
+              <span class="bar"><span style={`width:${row.pct}%`} /></span>
+              <span class="muted tabular-nums">{row.n}</span>
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <p class="mt-8">
+        <a class="link" href={r.mapsUrl} target="_blank" rel="noopener">Leer todas las reseñas en Google</a>
+      </p>
+    </div>
+
+    <ul class="quotes" role="list">
+      {reviews.map((rv) => (
+        <li class="quote">
+          <Star class="quote-mark text-oro" />
+          <blockquote>
+            <p>{rv.text}</p>
+          </blockquote>
+          <p class="mt-5 text-[1rem]">
+            <span class="font-semibold">{rv.author}</span>
+            <span class="muted">, {rv.stars} estrellas, {rv.when}</span>
+          </p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .reviews-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 64px; }
+  .reviews-score { grid-column: 1 / -1; }
+  .quotes { grid-column: 1 / -1; }
+
+  .score { font-size: clamp(5rem, 3rem + 8vw, 9rem); line-height: 0.8; color: var(--color-oro); }
+  .starfill { font-size: 1.375rem; line-height: 1; }
+  .starfill--part {
+    background: linear-gradient(90deg, var(--color-oro) var(--part), color-mix(in srgb, var(--color-tiza) 25%, transparent) var(--part));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .bars { display: grid; gap: 10px; max-width: 26rem; }
+  .bar-row { display: grid; grid-template-columns: 2.5rem 1fr; align-items: center; gap: 12px; font-size: 0.95rem; }
+  .bar-row dd { display: grid; grid-template-columns: 1fr 2.5rem; align-items: center; gap: 12px; }
+  .bar { height: 6px; border-radius: 999px; background: color-mix(in srgb, var(--color-tiza) 12%, transparent); overflow: hidden; }
+  .bar > span { display: block; height: 100%; background: var(--color-oro); border-radius: inherit; }
+
+  .quote { position: relative; padding: 36px 0 36px 48px; border-top: 1px solid color-mix(in srgb, var(--color-tiza) 12%, transparent); }
+  .quote:last-child { border-bottom: 1px solid color-mix(in srgb, var(--color-tiza) 12%, transparent); }
+  .quote-mark { position: absolute; left: 0; top: 40px; width: 22px; }
+  .quote blockquote p { font-size: clamp(1.1875rem, 1rem + 0.6vw, 1.4375rem); line-height: 1.5; max-width: 38em; }
+
+  @media (min-width: 1024px) {
+    .reviews-score { grid-column: 1 / span 5; position: sticky; top: calc(var(--header-h) + 48px); align-self: start; }
+    .quotes { grid-column: 7 / span 6; }
+  }
+</style>

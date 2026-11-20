@@ -1,0 +1,59 @@
+---
+// Estado "abierto ahora", calculado en el navegador con la hora de Honduras.
+// Sin JavaScript queda el horario fijo, que siempre es cierto.
+import { restaurant as r, hoursLabel } from '../data/restaurant';
+interface Props { class?: string }
+const { class: className = '' } = Astro.props;
+---
+<p
+  class={`open-status ${className}`}
+  data-open-status
+  data-open={r.hours.open}
+  data-close={r.hours.close}
+  data-tz={r.timezone}
+>
+  <span class="dot" aria-hidden="true"></span>
+  <span data-open-text>Abierto todos los días, de {hoursLabel}</span>
+</p>
+
+<style>
+  .open-status { display: flex; align-items: center; gap: 0.6em; }
+  .dot {
+    width: 8px; height: 8px; border-radius: 999px; flex: none;
+    background: var(--color-tiza-muted);
+  }
+  .open-status[data-state='open'] .dot { background: var(--color-nopal-claro); box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-nopal-claro) 22%, transparent); }
+  .open-status[data-state='open'] [data-open-text] { color: var(--color-nopal-claro); }
+  .open-status[data-state='closed'] .dot { background: var(--color-chile-claro); }
+</style>
+
+<script>
+  const toMin = (hhmm: string) => {
+    const [h, m] = hhmm.split(':').map(Number);
+    return h * 60 + m;
+  };
+  const fmt = (min: number) => {
+    const h = Math.floor(min / 60), m = min % 60;
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    return `${h12}${m ? `:${String(m).padStart(2, '0')}` : ''} ${h >= 12 ? 'p.m.' : 'a.m.'}`;
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-open-status]').forEach((el) => {
+    const open = toMin(el.dataset.open!);
+    const close = toMin(el.dataset.close!);
+    const parts = new Intl.DateTimeFormat('en-GB', { timeZone: el.dataset.tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    const now = Number(parts.find((p) => p.type === 'hour')!.value) * 60 + Number(parts.find((p) => p.type === 'minute')!.value);
+    const text = el.querySelector('[data-open-text]')!;
+
+    if (now >= open && now < close) {
+      el.dataset.state = 'open';
+      text.textContent = `Abierto ahora, hasta las ${fmt(close)}`;
+    } else if (now < open) {
+      el.dataset.state = 'closed';
+      text.textContent = `Cerrado ahora. Abrimos hoy a las ${fmt(open)}`;
+    } else {
+      el.dataset.state = 'closed';
+      text.textContent = `Cerrado ahora. Abrimos mañana a las ${fmt(open)}`;
+    }
+  });
+</script>
